@@ -70,7 +70,7 @@ public class UiManager : MonoBehaviour
 
     private IEnumerator EnableWinText()
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(4);
         speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
         winText.SetActive(true);
     }
