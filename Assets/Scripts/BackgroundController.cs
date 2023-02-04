@@ -9,7 +9,7 @@ public class BackgroundController : MonoBehaviour
 
     public void Update()
     {
-        
+        SetBackground();
     }
 
 
