@@ -28,6 +28,7 @@ public class SliderScript : MonoBehaviour
             if(GameManager.instance.activeLevel.controlType == ControlType.Hold)
                 sliderSpeed -= sliderMoveMultiplier * balanceInput.ReadValue<float>();
             sliderSpeed += GameManager.instance.GetRandomnessSpeed();
+            Debug.LogError("randomness speed: " + GameManager.instance.GetRandomnessSpeed());
             sliderSpeed = Mathf.Clamp(sliderSpeed, -maxSpeed, maxSpeed);
             balanceSlider.value = balanceSlider.value + sliderSpeed* Time.deltaTime;
             sliderSpeed = Mathf.SmoothDamp(sliderSpeed, 0, ref yVelocity, dampingTime);
@@ -43,6 +44,7 @@ public class SliderScript : MonoBehaviour
     {
         DadController.ResetDad();
         balanceSlider.value = 0;
+        sliderSpeed = 0;
     }
     private void OnInput(float value)
     {
