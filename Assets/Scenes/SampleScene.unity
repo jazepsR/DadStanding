@@ -280,15 +280,15 @@ RectTransform:
   m_GameObject: {fileID: 158092075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: -1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1644726949}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.0140076, y: 10.4032}
-  m_SizeDelta: {x: -37.1161, y: -59.8477}
+  m_AnchoredPosition: {x: 16.677, y: 2.5958}
+  m_SizeDelta: {x: -67.0445, y: -44.2329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158092077
 MonoBehaviour:
@@ -312,8 +312,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: What's the difference between USA and USB?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6e57944c8f6ef7446b068261cc262ce3, type: 2}
+  m_sharedMaterial: {fileID: -6692342913019842776, guid: 6e57944c8f6ef7446b068261cc262ce3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -657,8 +657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -169, y: -83.19385}
-  m_SizeDelta: {x: 209.4, y: 66.7123}
+  m_AnchoredPosition: {x: -207.38635, y: -83.19385}
+  m_SizeDelta: {x: 286.1727, y: 66.7123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436567796
 MonoBehaviour:
@@ -682,8 +682,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:15:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6e57944c8f6ef7446b068261cc262ce3, type: 2}
+  m_sharedMaterial: {fileID: -6692342913019842776, guid: 6e57944c8f6ef7446b068261cc262ce3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -710,9 +710,9 @@ MonoBehaviour:
   m_fontSize: 52
   m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 52
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -881,7 +881,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 53c88c93026cd21428ed5aa42aa6f3ad, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -1170,7 +1170,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 53c88c93026cd21428ed5aa42aa6f3ad, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -1627,7 +1627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 425f57665a828694db534ef77fcc0fdc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b599c1d8bceece488e21e40b9e0502a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2302,7 +2302,7 @@ RectTransform:
   m_GameObject: {fileID: 1644726948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: -1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 158092076}
   m_Father: {fileID: 2018050781}
