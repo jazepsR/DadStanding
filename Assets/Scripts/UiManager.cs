@@ -6,8 +6,13 @@ using UnityEngine;
 public class UiManager : MonoBehaviour
 {
     public static UiManager instance;
+
+    public GameObject speechBubble;
+    public TMP_Text speechBubbleText;
+
     [Header("win menu")]
     public GameObject winMenu;
+    public GameObject winText;
 
 
     [Header("lose menu")]
@@ -35,16 +40,24 @@ public class UiManager : MonoBehaviour
         {
             case GameState.Starting:
                 startMenu.SetActive(true);
+                speechBubble.SetActive(true);
+                speechBubbleText.text = GameManager.instance.activeJoke.setupText;
                 break;
             case GameState.Playing:
                 gameplayMenu.SetActive(true);
+                speechBubble.SetActive(false);
 
                 break;
             case GameState.Win:
-                winMenu.SetActive(true);   
+                winMenu.SetActive(true);
+                speechBubble.SetActive(true);
+                winText.SetActive(false);
+                StartCoroutine(EnableWinText());
+                speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
                 break;
             case GameState.Fail:
                 StartCoroutine(EnableLoseMenu());
+                speechBubble.SetActive(false);
                 break;
         }
     }
@@ -53,6 +66,12 @@ public class UiManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         loseMenu.SetActive(true);
         loseTime.text = "ONLY NEEDED " + GameManager.instance.GetLevelTimeString() + " MORE SECONDS";
+    }
+
+    private IEnumerator EnableWinText()
+    {
+        yield return new WaitForSecondsRealtime(2);
+        winText.SetActive(true);
     }
 
     void DisableUI()

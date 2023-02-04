@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
+
 public enum GameState { Starting, Playing, Fail, Win}
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text timer;
     private float levelTime;
     [HideInInspector] public LevelData activeLevel;
+    [SerializeField] private JokeScriptable[] jokes;
+    [HideInInspector] public JokeScriptable activeJoke;
 
     public SliderScript[] sliders;
     // Start is called before the first frame update
@@ -22,7 +26,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        StartLevel(debugLevel);
+        ResetLevel();
     }
     public float GetRandomnessSpeed()
     {
@@ -34,10 +38,21 @@ public class GameManager : MonoBehaviour
     }
     public void ResetLevel()
     {
-        StartLevel(activeLevel);
+        gameState = GameState.Starting;
+        activeJoke = jokes[Random.Range(0, jokes.Length)];
+        UiManager.instance.SetupUI();
+        foreach (SliderScript slider in sliders)
+        {
+            slider.Reset();
+        }
+    }
+    public void StartLevel()
+    {
+        StartLevel(debugLevel);
     }
     void StartLevel(LevelData level)
     {
+        activeJoke = jokes[Random.Range(0, jokes.Length)];
         levelTime = level.levelLength;
         gameState = GameState.Playing;
         activeLevel = level;
@@ -64,7 +79,10 @@ public class GameManager : MonoBehaviour
         switch(gameState)
         {
             case GameState.Starting:
-
+                if(  Keyboard.current.anyKey.wasPressedThisFrame)
+                {
+                    StartLevel();
+                }
                 break;
             case GameState.Playing:
                 levelTime = Mathf.Max(0, levelTime - Time.deltaTime);
@@ -75,8 +93,8 @@ public class GameManager : MonoBehaviour
                     UiManager.instance.SetupUI();
                     foreach (SliderScript slider in sliders)
                     {
-                        slider.SetWinState();
                         slider.Reset();
+                        slider.SetWinState();
                     }
                 }
                 break;

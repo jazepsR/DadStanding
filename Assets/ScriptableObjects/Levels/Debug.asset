@@ -109,7 +109,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelLength: 23
+  levelLength: 13
   randomnessStrength: 0.612
   controlType: 0
   gameplayBackground: {fileID: 21300000, guid: 205bfa5d02994cb4db4db6aa0bbb3c9f, type: 3}
