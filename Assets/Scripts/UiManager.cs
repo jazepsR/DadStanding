@@ -44,10 +44,15 @@ public class UiManager : MonoBehaviour
                 winMenu.SetActive(true);   
                 break;
             case GameState.Fail:
-                loseMenu.SetActive(true);
-                loseTime.text = "ONLY NEEDED " + GameManager.instance.GetLevelTimeString() + " MORE SECONDS";
+                StartCoroutine(EnableLoseMenu());
                 break;
         }
+    }
+    private IEnumerator EnableLoseMenu()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        loseMenu.SetActive(true);
+        loseTime.text = "ONLY NEEDED " + GameManager.instance.GetLevelTimeString() + " MORE SECONDS";
     }
 
     void DisableUI()
