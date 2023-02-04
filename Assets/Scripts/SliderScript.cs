@@ -13,7 +13,7 @@ public class SliderScript : MonoBehaviour
     private float yVelocity = 0.0f;
     [SerializeField] private float maxSpeed = 0.1f;
     // Start is called before the first frame update
-
+    [SerializeField] private DadController DadController;
     void Start()
     {
         balanceInput.performed += ctx => OnInput(ctx.ReadValue<float>());
@@ -31,14 +31,17 @@ public class SliderScript : MonoBehaviour
             sliderSpeed = Mathf.Clamp(sliderSpeed, -maxSpeed, maxSpeed);
             balanceSlider.value = balanceSlider.value + sliderSpeed* Time.deltaTime;
             sliderSpeed = Mathf.SmoothDamp(sliderSpeed, 0, ref yVelocity, dampingTime);
-            if(Mathf.Abs(balanceSlider.value) > 0.99f)
+            DadController.SetDadAnimation(balanceSlider.value);
+            if (Mathf.Abs(balanceSlider.value) > 0.99f)
             {
                 GameManager.instance.SetLoseState();
+                DadController.SetDadAnimation(balanceSlider.value >0? 2 :-2);
             }
         }
     }
     public void Reset()
     {
+        DadController.ResetDad();
         balanceSlider.value = 0;
     }
     private void OnInput(float value)

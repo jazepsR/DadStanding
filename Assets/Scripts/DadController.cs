@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class DadController : MonoBehaviour
 {
+    public Animator dadAnimator;
     // Start is called before the first frame update
-    void Start()
+    public void SetDadAnimation(float value)
     {
-        
+        dadAnimator.SetFloat("balance", value);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetDad()
     {
-        
+        dadAnimator.Rebind();
+        dadAnimator.Update(0f);
     }
 }
