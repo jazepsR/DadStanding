@@ -929,6 +929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 580240106}
   - component: {fileID: 580240105}
+  - component: {fileID: 580240107}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1001,6 +1002,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580240107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580240104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715a2acc30ee1924a98a55531d0f2a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bg: {fileID: 580240105}
 --- !u!1 &605677322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &713229656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1254,7 +1268,7 @@ MonoBehaviour:
   m_MinValue: -1
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: -0.29
+  m_Value: -0.77
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1885,7 +1899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1623412092
 RectTransform:
   m_ObjectHideFlags: 0

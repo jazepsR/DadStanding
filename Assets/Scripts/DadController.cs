@@ -10,7 +10,10 @@ public class DadController : MonoBehaviour
     {
         dadAnimator.SetFloat("balance", value);
     }
-
+    public void SetWinState()
+    {
+        dadAnimator.SetTrigger("win");
+    }
     public void ResetDad()
     {
         dadAnimator.Rebind();

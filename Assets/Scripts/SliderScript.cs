@@ -46,6 +46,11 @@ public class SliderScript : MonoBehaviour
         balanceSlider.value = 0;
         sliderSpeed = 0;
     }
+
+    public void SetWinState()
+    {
+        DadController.SetWinState();
+    }
     private void OnInput(float value)
     {
         if(GameManager.instance.activeLevel.controlType == ControlType.Tap)
