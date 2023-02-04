@@ -13,6 +13,7 @@ public class LevelData : ScriptableObject
     [Range(0, 1)]
     public float randomnessStrength;
     public ControlType controlType = ControlType.Tap;
+    public Sprite gameplayBackground, winBackground, loseBackground;
 
 
     public float GetSpeedAdjustment(float completionPercentage)
