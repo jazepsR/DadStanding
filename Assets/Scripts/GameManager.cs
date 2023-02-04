@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
                     UiManager.instance.SetupUI();
                     foreach (SliderScript slider in sliders)
                     {
+                        slider.SetWinState();
                         slider.Reset();
                     }
                 }
