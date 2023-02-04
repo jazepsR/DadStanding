@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private LevelData debugLevel;
     [SerializeField] private float randomnessFactor = 4f;
+    [SerializeField] private float randomnessSpeed = 0.1f;
     public TMP_Text timer;
     private float levelTime;
     [HideInInspector] public LevelData activeLevel;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         if(activeLevel)
         {
-            return activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength)* randomnessFactor;
+            return Mathf.Clamp( activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength)* randomnessFactor, -randomnessSpeed, randomnessSpeed);
         }
         return 0;
     }
@@ -72,6 +73,10 @@ public class GameManager : MonoBehaviour
                 {
                     gameState = GameState.Win;
                     UiManager.instance.SetupUI();
+                    foreach (SliderScript slider in sliders)
+                    {
+                        slider.Reset();
+                    }
                 }
                 break;
 
