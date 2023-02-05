@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public enum GameState { Starting, Playing, Fail, Win}
 public class GameManager : MonoBehaviour
@@ -11,11 +12,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private LevelData debugLevel;
     [SerializeField] private float randomnessFactor = 4f;
-    [SerializeField] private float randomnessSpeed = 0.1f;
     public TMP_Text timer;
     private float levelTime;
     [HideInInspector] public LevelData activeLevel;
-    [SerializeField] private JokeScriptable[] jokes;
+    [SerializeField] private JokeScriptable[] generalJokes;
     [HideInInspector] public JokeScriptable activeJoke;
 
     public SliderScript[] sliders;
@@ -32,14 +32,15 @@ public class GameManager : MonoBehaviour
     {
         if(activeLevel)
         {
-            return Mathf.Clamp( activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength)* randomnessFactor, -randomnessSpeed, randomnessSpeed);
+            return Mathf.Clamp( activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength)* randomnessFactor, -activeLevel.randomnessMaxSpeed, activeLevel.randomnessMaxSpeed);
         }
         return 0;
     }
     public void ResetLevel()
     {
+        activeLevel = debugLevel;
         gameState = GameState.Starting;
-        activeJoke = jokes[Random.Range(0, jokes.Length)];
+        activeJoke = GetNextJoke();
         SoundController.instance.PlaySetup(activeJoke);
         UiManager.instance.SetupUI();
         foreach (SliderScript slider in sliders)
@@ -53,11 +54,12 @@ public class GameManager : MonoBehaviour
     }
     void StartLevel(LevelData level)
     {
-        activeJoke = jokes[Random.Range(0, jokes.Length)];
-       // SoundController.instance.PlaySetup(activeJoke);
+        activeLevel = level;
+        if (activeJoke== null)
+            activeJoke = GetNextJoke();
+        // SoundController.instance.PlaySetup(activeJoke);
         levelTime = level.levelLength;
         gameState = GameState.Playing;
-        activeLevel = level;
         UiManager.instance.SetupUI();
         foreach(SliderScript slider in sliders)
         {
@@ -76,6 +78,32 @@ public class GameManager : MonoBehaviour
         return $"{(int)levelTime / 60}:{levelTime % 60:00.00}";
     }
 
+    private JokeScriptable GetNextJoke()
+    {
+        List<JokeScriptable> availableJokes = new List<JokeScriptable>(generalJokes);
+        if (activeLevel)
+            availableJokes.AddRange(activeLevel.jokes);
+        int leastTold = int.MaxValue;
+        foreach(JokeScriptable joke in availableJokes)
+        {
+            if (joke.timesTold < leastTold)
+            {
+                leastTold = joke.timesTold;
+            }
+        }
+        List<JokeScriptable> leastToldJokes = new List<JokeScriptable>();
+        foreach(JokeScriptable joke in availableJokes)
+        {
+            if(joke.timesTold == leastTold)
+            {
+                leastToldJokes.Add(joke);
+            }
+        }
+        return leastToldJokes[Random.Range(0, leastToldJokes.Count)];
+
+    }
+
+
     void OnWin()
     {
         gameState = GameState.Win;
@@ -86,6 +114,7 @@ public class GameManager : MonoBehaviour
             slider.SetWinState();
         }
         SoundController.instance.PlayJoke(activeJoke);
+        activeJoke.timesTold++;
     }
     // Update is called once per frame
     void Update()

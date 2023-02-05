@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1e32c6d033e79447a0d395635701e03, type: 3}
-  m_Name: DNA
+  m_Name: haircut
   m_EditorClassIdentifier: 
-  setupText: Today my doctor told me that my DNA was backwards
-  setupAudio: {fileID: 0}
-  punchlineText: I said, "And?"
-  punchlineAudio: {fileID: 0}
+  setupText: What do you call a group of men waiting for a haircut?
+  setupAudio: {fileID: 8300000, guid: 7558821887f97d94bbb98934b124a077, type: 3}
+  punchlineText: ' A barber-cue!'
+  punchlineAudio: {fileID: 8300000, guid: 14902620aa1c48d468baff321a1f9b40, type: 3}

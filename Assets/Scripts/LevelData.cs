@@ -7,11 +7,15 @@ public enum ControlType { Tap, Hold}
 public class LevelData : ScriptableObject
 {
     public string levelName;
+    public JokeScriptable[] jokes;
     public AnimationCurve moveCurve;
     [Range(0,600)]
     public float levelLength;
     [Range(0, 1)]
     public float randomnessStrength;
+    public float randomnessMaxSpeed = 0.1f;
+    public float sliderMoveSpeed=1;
+    public float dampingTime = 0.25f;
     public ControlType controlType = ControlType.Tap;
     public Sprite gameplayBackground, winBackground, loseBackground;
 
