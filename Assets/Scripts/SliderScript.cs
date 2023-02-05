@@ -44,6 +44,11 @@ public class SliderScript : MonoBehaviour
 
     public void SetWinState()
     {
+      //  DadController.SetWinState();
+    }
+
+    public void SetPunchlineState()
+    {
         DadController.SetWinState();
     }
     private void OnInput(float value)

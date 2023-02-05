@@ -28,7 +28,7 @@ public class BackgroundController : MonoBehaviour
             case GameState.Fail:
                 bg.sprite = GameManager.instance.activeLevel.loseBackground;
                 break;
-            case GameState.Win:
+            case GameState.punchLine:
                 bg.sprite = GameManager.instance.activeLevel.winBackground;
                 break;
         }

@@ -8,7 +8,10 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
 
     public GameObject speechBubble;
+    public GameObject speechBubblePunchline;
+    public GameObject speechBubbleNext;
     public TMP_Text speechBubbleText;
+    public TMP_Text speechBubblePunchlineText;
 
     [Header("win menu")]
     public GameObject winMenu;
@@ -42,7 +45,8 @@ public class UiManager : MonoBehaviour
             case GameState.Starting:
                 startMenu.SetActive(true);
                 speechBubble.SetActive(true);
-                speechBubbleText.text = GameManager.instance.activeJoke.setupText;
+                speechBubbleText.text = GameManager.instance.activeJoke.setupText; 
+                speechBubbleNext.SetActive(true);
                 break;
             case GameState.Playing:
                 gameplayMenu.SetActive(true);
@@ -50,15 +54,20 @@ public class UiManager : MonoBehaviour
 
                 break;
             case GameState.Win:
+                speechBubbleNext.SetActive(false);
                 winMenu.SetActive(true);
                 speechBubble.SetActive(true);
                 winText.SetActive(false);
-                StartCoroutine(EnableWinText());
+                speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
                 speechBubbleText.text = "As I was saying.. \n" +GameManager.instance.activeJoke.setupText;
                 break;
 
             case GameState.punchLine:
-                winMenuButtons.SetActive(true);
+                winMenu.SetActive(true);
+                StartCoroutine(EnableWinButtons());
+                winText.SetActive(true);
+                speechBubblePunchline.SetActive(true);
+                speechBubblePunchlineText.text = GameManager.instance.activeJoke.punchlineText;
                 break;
             case GameState.Fail:
                 StartCoroutine(EnableLoseMenu());
@@ -73,11 +82,10 @@ public class UiManager : MonoBehaviour
         loseTime.text = "ONLY NEEDED " + GameManager.instance.GetLevelTimeString() + " MORE SECONDS";
     }
 
-    private IEnumerator EnableWinText()
+    private IEnumerator EnableWinButtons()
     {
-        yield return new WaitForSecondsRealtime(4);
-        speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
-        winText.SetActive(true);
+        yield return new WaitForSecondsRealtime(2);
+        winMenuButtons.SetActive(true);
     }
 
     void DisableUI()
@@ -86,7 +94,8 @@ public class UiManager : MonoBehaviour
         winMenu.SetActive(false);
         loseMenu.SetActive(false);
         startMenu.SetActive(false);
-        winMenuButtons.SetActive(false);
+        winMenuButtons.SetActive(false); 
+        speechBubblePunchline.SetActive(false);
     }
 
     public void ResetLevel()

@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartLevel()
     {
-        StartLevel(debugLevel);
+        StartLevel(activeLevel);
     }
     void StartLevel(LevelData level)
     {
@@ -125,6 +125,17 @@ public class GameManager : MonoBehaviour
         }
         SoundController.instance.PlayJoke(activeJoke);
         activeJoke.timesTold++;
+    }
+
+    public void OnPunchline()
+    {
+        gameState = GameState.punchLine;
+        UiManager.instance.SetupUI();
+        foreach (SliderScript slider in sliders)
+        {
+            slider.SetPunchlineState();
+        }
+
     }
     // Update is called once per frame
     void Update()

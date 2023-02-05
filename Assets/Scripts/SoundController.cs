@@ -32,6 +32,7 @@ public class SoundController : MonoBehaviour
         yield return new WaitForSecondsRealtime(asIWasSaying.length + 0.2f);
         source.PlayOneShot(joke.setupAudio);
         yield return new WaitForSecondsRealtime(joke.setupAudio.length + 0.2f);
+        GameManager.instance.OnPunchline();
         source.PlayOneShot(joke.punchlineAudio);
     }
     // Update is called once per frame
