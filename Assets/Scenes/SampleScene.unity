@@ -1499,8 +1499,18 @@ MonoBehaviour:
   randomnessSpeed: 0.025
   timer: {fileID: 436567796}
   activeLevel: {fileID: 0}
-  jokes:
-  - {fileID: 11400000, guid: 9b0778e6f82a61545bc3f3cc620e63c8, type: 2}
+  generalJokes:
+  - {fileID: 11400000, guid: 8105b4c7a982a104ca6e441a9a93e905, type: 2}
+  - {fileID: 11400000, guid: d4f58790f25b55846bbf7943eab2915f, type: 2}
+  - {fileID: 11400000, guid: 3f482192745388649aec4e8c11c7de41, type: 2}
+  - {fileID: 11400000, guid: 2e080c838f46b9f48b7c3e2dddf5a382, type: 2}
+  - {fileID: 11400000, guid: 1b7644f0208ea924b9e64fad4a2eca39, type: 2}
+  - {fileID: 11400000, guid: 654b34524aad0cf4fb956a95176563e0, type: 2}
+  - {fileID: 11400000, guid: 15b73dd609b423c4d8d8b1ab735b4c44, type: 2}
+  - {fileID: 11400000, guid: ec5d4d6da8af95f4d94a2413495e0d99, type: 2}
+  - {fileID: 11400000, guid: 1051ce0b52a30324dbf3e01f180002d8, type: 2}
+  - {fileID: 11400000, guid: 9bbcf89911e4c5e45affe59b7ff62ca4, type: 2}
+  - {fileID: 11400000, guid: 82e7567b79c884146a497eb0b305fa08, type: 2}
   activeJoke: {fileID: 0}
   sliders:
   - {fileID: 1564279812}

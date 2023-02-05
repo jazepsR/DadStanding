@@ -7,6 +7,7 @@ public enum ControlType { Tap, Hold}
 public class LevelData : ScriptableObject
 {
     public string levelName;
+    public JokeScriptable[] jokes;
     public AnimationCurve moveCurve;
     [Range(0,600)]
     public float levelLength;

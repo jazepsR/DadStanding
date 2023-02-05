@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e32c6d033e79447a0d395635701e03, type: 3}
+  m_Name: Ants2
+  m_EditorClassIdentifier: 
+  setupText: Did you know you can tell the gender of an ant by dropping it in water?
+  setupAudio: {fileID: 8300000, guid: d0d0d7530a42e2747be2797b3a6833a8, type: 3}
+  punchlineText: If it sinks, it's a girl ant. If it floats it's buoyant.
+  punchlineAudio: {fileID: 8300000, guid: c07c748560ac2bb45857d8dbe9547e9b, type: 3}

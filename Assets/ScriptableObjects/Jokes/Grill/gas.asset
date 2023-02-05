@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1e32c6d033e79447a0d395635701e03, type: 3}
-  m_Name: USB
+  m_Name: gas
   m_EditorClassIdentifier: 
-  setupText: What's the difference between USA and USB?
-  setupAudio: {fileID: 0}
-  punchlineText: One connects to your computer and accesses all your data, and the
-    other is an IT industry standard
-  punchlineAudio: {fileID: 0}
+  setupText: "What\u2019s the difference between a dad and a grill?"
+  setupAudio: {fileID: 8300000, guid: a1c7de3c1769e9b449a7eb6bdfec8cb7, type: 3}
+  punchlineText: A grill runs out of gas
+  punchlineAudio: {fileID: 8300000, guid: 9d9a47be19498d34893f4bb92a87bf75, type: 3}
