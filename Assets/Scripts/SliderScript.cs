@@ -7,11 +7,8 @@ public class SliderScript : MonoBehaviour
 {
     public Slider balanceSlider;
     public InputAction balanceInput;
-    public float sliderMoveMultiplier;
-    public float dampingTime = 0.5f;
     private float sliderSpeed;
     private float yVelocity = 0.0f;
-    [SerializeField] private float maxSpeed = 0.1f;
     // Start is called before the first frame update
     [SerializeField] private DadController DadController;
     void Start()
@@ -26,12 +23,10 @@ public class SliderScript : MonoBehaviour
         if (GameManager.gameState == GameState.Playing)
         {
             if(GameManager.instance.activeLevel.controlType == ControlType.Hold)
-                sliderSpeed -= sliderMoveMultiplier * balanceInput.ReadValue<float>();
+                sliderSpeed -= GameManager.instance.activeLevel.sliderMoveSpeed * balanceInput.ReadValue<float>();
             sliderSpeed += GameManager.instance.GetRandomnessSpeed();
-            //Debug.LogError("randomness speed: " + GameManager.instance.GetRandomnessSpeed());
-            sliderSpeed = Mathf.Clamp(sliderSpeed, -maxSpeed, maxSpeed);
             balanceSlider.value = balanceSlider.value + sliderSpeed* Time.deltaTime;
-            sliderSpeed = Mathf.SmoothDamp(sliderSpeed, 0, ref yVelocity, dampingTime);
+            sliderSpeed = Mathf.SmoothDamp(sliderSpeed, 0, ref yVelocity, GameManager.instance.activeLevel.dampingTime);
             DadController.SetDadAnimation(balanceSlider.value);
             if (Mathf.Abs(balanceSlider.value) > 0.99f)
             {
@@ -54,6 +49,6 @@ public class SliderScript : MonoBehaviour
     private void OnInput(float value)
     {
         if(GameManager.instance.activeLevel.controlType == ControlType.Tap)
-            sliderSpeed -= value * sliderMoveMultiplier;
+            sliderSpeed -= value * GameManager.instance.activeLevel.sliderMoveSpeed;
     }
 }

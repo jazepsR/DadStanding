@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e03cdcecf130404a9eeaa75ef527e56, type: 3}
-  m_Name: Debug
+  m_Name: CursedGrillParty
   m_EditorClassIdentifier: 
-  levelName: Grill Party
+  levelName: Cursed Grill Party
   jokes:
   - {fileID: 11400000, guid: 533f05a0fc674c64685687f9abe00fb0, type: 2}
   - {fileID: 11400000, guid: 9b0778e6f82a61545bc3f3cc620e63c8, type: 2}
@@ -27,8 +27,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.04009613
-      value: 0.050907582
+      time: -0.00094786653
+      value: 0.504717
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -36,8 +36,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.112063155
-      value: -0.18778464
+      time: 0.004788384
+      value: 0.20144957
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -45,8 +45,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.19769363
-      value: 0.29830596
+      time: 0.055682227
+      value: 0.79470646
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -54,8 +54,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.2511024
-      value: -0.117663264
+      time: 0.07517068
+      value: 0.21111563
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -63,8 +63,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.3614229
-      value: 0.3197755
+      time: 0.14993823
+      value: 0.7914453
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -72,17 +72,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.4237635
-      value: -0.049082875
-      inSlope: -3.027526
-      outSlope: -3.027526
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.5538398
-      value: -0.26277167
+      time: 0.18250471
+      value: 0.21136355
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -90,8 +81,35 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.62676543
-      value: 0.08957091
+      time: 0.2575364
+      value: 0.78256464
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.31412637
+      value: 0.20751722
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.37595174
+      value: 0.7519957
+      inSlope: 1.8132411
+      outSlope: 1.8132411
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.44112915
+      value: 0.28507954
       inSlope: -0.21680841
       outSlope: -0.21680841
       tangentMode: 0
@@ -99,8 +117,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.47689086
     - serializedVersion: 3
-      time: 0.75857896
-      value: 0.25373778
+      time: 0.71753496
+      value: 0.7075472
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -108,8 +126,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.8922281
-      value: -0.24390376
+      time: 0.8511841
+      value: 0.20990565
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -119,12 +137,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelLength: 13
-  randomnessStrength: 0.17
+  levelLength: 15
+  randomnessStrength: 0.111
   randomnessMaxSpeed: 0.1
-  sliderMoveSpeed: 1.87
+  sliderMoveSpeed: 1
   dampingTime: 0.25
   controlType: 0
-  gameplayBackground: {fileID: 21300000, guid: 205bfa5d02994cb4db4db6aa0bbb3c9f, type: 3}
-  winBackground: {fileID: 21300000, guid: 051405ff0414c7142833dec4294e4823, type: 3}
-  loseBackground: {fileID: 21300000, guid: d150c5fda98823f419771b512dfb3642, type: 3}
+  gameplayBackground: {fileID: 21300000, guid: 3f3b80a2ae42c6245aed6955935455bc, type: 3}
+  winBackground: {fileID: 21300000, guid: 0af4375dcdea1ed47a5c119d19b519ed, type: 3}
+  loseBackground: {fileID: 21300000, guid: 15cab2843aed6fc409f0ab2d97591d17, type: 3}
