@@ -14,7 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Beach
   jokes:
+  - {fileID: 11400000, guid: b1e48b32e7b2869429f8bb232c79ed5d, type: 2}
   - {fileID: 11400000, guid: 1e48b3170b34e774195a751b1f5394a3, type: 2}
+  - {fileID: 11400000, guid: ca6a9cff9ed89cc45a6efa9b10e0a7b7, type: 2}
+  - {fileID: 11400000, guid: 1a72b69a5c55fb54580ae065f2bc5b76, type: 2}
+  - {fileID: 11400000, guid: 2b1fda55c7601ec418d84fa7df534be7, type: 2}
+  - {fileID: 11400000, guid: 4be1fad79a33baf408e9eb649992c84c, type: 2}
+  - {fileID: 11400000, guid: 10baa11189934704caf25979128ec8ce, type: 2}
+  - {fileID: 11400000, guid: 6aaa23b9f6dacdc4f995cfb8532f1e56, type: 2}
+  - {fileID: 11400000, guid: d3657f7411f732545962cd9abf19db82, type: 2}
+  - {fileID: 11400000, guid: e07b5a63430e0be4eb7fd53f97779e6a, type: 2}
+  - {fileID: 11400000, guid: 33c838b30e8d5e141af4402aeafcd3df, type: 2}
   moveCurve:
     serializedVersion: 2
     m_Curve:

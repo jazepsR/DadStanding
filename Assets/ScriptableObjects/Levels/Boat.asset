@@ -14,7 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Boat
   jokes:
-  - {fileID: 11400000, guid: 533f05a0fc674c64685687f9abe00fb0, type: 2}
+  - {fileID: 11400000, guid: c9d51723465b7954787adf8f711765db, type: 2}
+  - {fileID: 11400000, guid: aa280d0295d105f41af266602d1f87ca, type: 2}
+  - {fileID: 11400000, guid: 4185a0ce6c473fe448bd21757b359734, type: 2}
+  - {fileID: 11400000, guid: 9c5a630d161c9154088ecdc52573fe73, type: 2}
+  - {fileID: 11400000, guid: 1c526bc04fa44484a8dfe98028647193, type: 2}
+  - {fileID: 11400000, guid: 386c333cb3a2ce943a94fbd9d1fc8f61, type: 2}
+  - {fileID: 11400000, guid: f1e66d8a33abc844794f665c1e712fce, type: 2}
+  - {fileID: 11400000, guid: b19a0dec4044a334f9ea4145baf25da5, type: 2}
   moveCurve:
     serializedVersion: 2
     m_Curve:

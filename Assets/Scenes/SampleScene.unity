@@ -1823,9 +1823,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugLevel: {fileID: 0}
   levels:
-  - {fileID: 11400000, guid: 6f27ef01e8335c54e93154c80ab313e9, type: 2}
   - {fileID: 11400000, guid: cd3c550f1ad2b1e4f83b2c06f2b9d064, type: 2}
   - {fileID: 11400000, guid: 4d0da95c28c784c40916b04225301902, type: 2}
+  - {fileID: 11400000, guid: 6f27ef01e8335c54e93154c80ab313e9, type: 2}
   randomnessFactor: 1
   timer: {fileID: 436567796}
   activeLevel: {fileID: 0}
@@ -1912,7 +1912,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1926,7 +1926,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1935708831}
   m_FillRect: {fileID: 2001520599}
   m_HandleRect: {fileID: 1935708830}
