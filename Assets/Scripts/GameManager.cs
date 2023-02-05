@@ -140,7 +140,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(gameState)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            Application.Quit();
+        }
+        switch (gameState)
         {
             case GameState.Starting:
                 if(  Keyboard.current.anyKey.wasPressedThisFrame)
