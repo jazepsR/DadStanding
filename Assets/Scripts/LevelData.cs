@@ -18,6 +18,7 @@ public class LevelData : ScriptableObject
     public float dampingTime = 0.25f;
     public ControlType controlType = ControlType.Tap;
     public Sprite gameplayBackground, winBackground, loseBackground;
+    public RuntimeAnimatorController dadAnimationController;
 
 
     public float GetSpeedAdjustment(float completionPercentage)

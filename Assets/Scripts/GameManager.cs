@@ -5,12 +5,14 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-public enum GameState { Starting, Playing, Fail, Win}
+public enum GameState { Starting, Playing, Fail, Win, punchLine}
 public class GameManager : MonoBehaviour
 {
     public static GameState gameState = GameState.Starting;
     public static GameManager instance;
     [SerializeField] private LevelData debugLevel;
+    [SerializeField] private LevelData[] levels;
+    private int levelIndex= 0;
     [SerializeField] private float randomnessFactor = 4f;
     public TMP_Text timer;
     private float levelTime;
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
     }
     public void ResetLevel()
     {
-        activeLevel = debugLevel;
+        activeLevel = levels[levelIndex];
         gameState = GameState.Starting;
         activeJoke = GetNextJoke();
         SoundController.instance.PlaySetup(activeJoke);
@@ -47,6 +49,14 @@ public class GameManager : MonoBehaviour
         {
             slider.Reset();
         }
+    }
+
+    public void NextLevel()
+    {
+        levelIndex++;
+        if(levelIndex >= levels.Length)
+            levelIndex = 0;
+        ResetLevel();
     }
     public void StartLevel()
     {
@@ -124,7 +134,7 @@ public class GameManager : MonoBehaviour
             case GameState.Starting:
                 if(  Keyboard.current.anyKey.wasPressedThisFrame)
                 {
-                    StartLevel();
+                    StartLevel(activeLevel);
                 }
                 break;
             case GameState.Playing:

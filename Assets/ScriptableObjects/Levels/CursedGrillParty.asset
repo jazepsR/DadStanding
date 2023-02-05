@@ -146,3 +146,4 @@ MonoBehaviour:
   gameplayBackground: {fileID: 21300000, guid: 3f3b80a2ae42c6245aed6955935455bc, type: 3}
   winBackground: {fileID: 21300000, guid: 0af4375dcdea1ed47a5c119d19b519ed, type: 3}
   loseBackground: {fileID: 21300000, guid: 15cab2843aed6fc409f0ab2d97591d17, type: 3}
+  dadAnimationController: {fileID: 9100000, guid: e07a5018a6c7ddd4ab6145bed5a6f342, type: 2}

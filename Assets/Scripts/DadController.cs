@@ -12,11 +12,11 @@ public class DadController : MonoBehaviour
     }
     public void SetWinState()
     {
-        Debug.LogError("win anim");
         dadAnimator.SetTrigger("win");
     }
     public void ResetDad()
     {
+        dadAnimator.runtimeAnimatorController = GameManager.instance.activeLevel.dadAnimationController;
         dadAnimator.Rebind();
         dadAnimator.Update(0f);
     }

@@ -10,25 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e03cdcecf130404a9eeaa75ef527e56, type: 3}
-  m_Name: Grill Party
+  m_Name: Beach
   m_EditorClassIdentifier: 
-  levelName: Grill Party
+  levelName: Beach
   jokes:
-  - {fileID: 11400000, guid: 533f05a0fc674c64685687f9abe00fb0, type: 2}
-  - {fileID: 11400000, guid: 9b0778e6f82a61545bc3f3cc620e63c8, type: 2}
-  - {fileID: 11400000, guid: 9207c3b61fece364883ce163ac4f4807, type: 2}
-  - {fileID: 11400000, guid: 3d3c92a5abeaa8749b2301b6e53a7a17, type: 2}
-  - {fileID: 11400000, guid: 19a0e280706c0444f9ad49df43f239d7, type: 2}
-  - {fileID: 11400000, guid: e5c110c2c6905cb47b573f70993ad24d, type: 2}
-  - {fileID: 11400000, guid: 32f5214190f54764e87d9ea78adf2e69, type: 2}
-  - {fileID: 11400000, guid: 6bddc4224b7860d479de5f9a36779a06, type: 2}
-  - {fileID: 11400000, guid: c798609d26661114ba81b7399dbbb586, type: 2}
+  - {fileID: 11400000, guid: 1e48b3170b34e774195a751b1f5394a3, type: 2}
   moveCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.007980611
-      value: 0.0056981444
+      time: -0.00094786653
+      value: 0.504717
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -36,8 +28,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.079947636
-      value: -0.23299408
+      time: 0.07101916
+      value: 0.26602477
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -45,8 +37,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.16557811
-      value: 0.25309652
+      time: 0.15664963
+      value: 0.75211537
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -54,8 +46,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.21898685
-      value: -0.1628727
+      time: 0.21005838
+      value: 0.33614615
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -63,8 +55,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.32930738
-      value: 0.27456605
+      time: 0.3203789
+      value: 0.7735849
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -72,8 +64,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.391648
-      value: -0.09429231
+      time: 0.38271952
+      value: 0.40472654
       inSlope: -3.027526
       outSlope: -3.027526
       tangentMode: 136
@@ -81,8 +73,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.5217243
-      value: -0.30798113
+      time: 0.5127958
+      value: 0.19103773
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -90,8 +82,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.5946499
-      value: 0.044361472
+      time: 0.58572143
+      value: 0.5433803
       inSlope: -0.21680841
       outSlope: -0.21680841
       tangentMode: 0
@@ -99,8 +91,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.47689086
     - serializedVersion: 3
-      time: 0.72646344
-      value: 0.20852834
+      time: 0.71753496
+      value: 0.7075472
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -108,8 +100,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.8601126
-      value: -0.2891132
+      time: 0.8511841
+      value: 0.20990565
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -125,7 +117,7 @@ MonoBehaviour:
   sliderMoveSpeed: 3.32
   dampingTime: 0.13
   controlType: 0
-  gameplayBackground: {fileID: 21300000, guid: 205bfa5d02994cb4db4db6aa0bbb3c9f, type: 3}
-  winBackground: {fileID: 21300000, guid: 051405ff0414c7142833dec4294e4823, type: 3}
-  loseBackground: {fileID: 21300000, guid: d150c5fda98823f419771b512dfb3642, type: 3}
-  dadAnimationController: {fileID: 9100000, guid: e07a5018a6c7ddd4ab6145bed5a6f342, type: 2}
+  gameplayBackground: {fileID: 21300000, guid: 714044a4066ed4943a2999408ffa0c71, type: 3}
+  winBackground: {fileID: 21300000, guid: 5376e72c791075e498eb4eca4759ac07, type: 3}
+  loseBackground: {fileID: 21300000, guid: ab781cac2156e144bb501f9c16e6faaf, type: 3}
+  dadAnimationController: {fileID: 9100000, guid: d0af946ab1e12904885bd8c4f9cf67d6, type: 2}

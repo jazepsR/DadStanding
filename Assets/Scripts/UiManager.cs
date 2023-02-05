@@ -13,6 +13,7 @@ public class UiManager : MonoBehaviour
     [Header("win menu")]
     public GameObject winMenu;
     public GameObject winText;
+    public GameObject winMenuButtons;
 
 
     [Header("lose menu")]
@@ -55,6 +56,10 @@ public class UiManager : MonoBehaviour
                 StartCoroutine(EnableWinText());
                 speechBubbleText.text = "As I was saying.. \n" +GameManager.instance.activeJoke.setupText;
                 break;
+
+            case GameState.punchLine:
+                winMenuButtons.SetActive(true);
+                break;
             case GameState.Fail:
                 StartCoroutine(EnableLoseMenu());
                 speechBubble.SetActive(false);
@@ -81,10 +86,16 @@ public class UiManager : MonoBehaviour
         winMenu.SetActive(false);
         loseMenu.SetActive(false);
         startMenu.SetActive(false);
+        winMenuButtons.SetActive(false);
     }
 
     public void ResetLevel()
     {
         GameManager.instance.ResetLevel();
+    }
+
+    public void NextLevel()
+    {
+        GameManager.instance.NextLevel();
     }
 }
