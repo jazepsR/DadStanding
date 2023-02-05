@@ -54,7 +54,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: balance
-    m_EventTreshold: -0.8
+    m_EventTreshold: -0.52
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7539368777455675903}
   m_Solo: 0
@@ -79,7 +79,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: balance
-    m_EventTreshold: -0.75
+    m_EventTreshold: -0.47
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2404493784957545959}
   m_Solo: 0
@@ -129,7 +129,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: balance
-    m_EventTreshold: 0.75
+    m_EventTreshold: 0.47
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7152100891293907422}
   m_Solo: 0
@@ -210,7 +210,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: balance
-    m_EventTreshold: 0.8
+    m_EventTreshold: 0.52
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4571492965045717450}
   m_Solo: 0

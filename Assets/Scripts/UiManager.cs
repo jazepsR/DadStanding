@@ -53,7 +53,7 @@ public class UiManager : MonoBehaviour
                 speechBubble.SetActive(true);
                 winText.SetActive(false);
                 StartCoroutine(EnableWinText());
-                speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
+                speechBubbleText.text = "As I was saying.. \n" +GameManager.instance.activeJoke.setupText;
                 break;
             case GameState.Fail:
                 StartCoroutine(EnableLoseMenu());
@@ -70,7 +70,8 @@ public class UiManager : MonoBehaviour
 
     private IEnumerator EnableWinText()
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(4);
+        speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
         winText.SetActive(true);
     }
 

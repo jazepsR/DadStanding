@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Starting;
         activeJoke = jokes[Random.Range(0, jokes.Length)];
+        SoundController.instance.PlaySetup(activeJoke);
         UiManager.instance.SetupUI();
         foreach (SliderScript slider in sliders)
         {
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
     void StartLevel(LevelData level)
     {
         activeJoke = jokes[Random.Range(0, jokes.Length)];
+       // SoundController.instance.PlaySetup(activeJoke);
         levelTime = level.levelLength;
         gameState = GameState.Playing;
         activeLevel = level;
@@ -73,6 +75,18 @@ public class GameManager : MonoBehaviour
     {
         return $"{(int)levelTime / 60}:{levelTime % 60:00.00}";
     }
+
+    void OnWin()
+    {
+        gameState = GameState.Win;
+        UiManager.instance.SetupUI();
+        foreach (SliderScript slider in sliders)
+        {
+            slider.Reset();
+            slider.SetWinState();
+        }
+        SoundController.instance.PlayJoke(activeJoke);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -89,13 +103,7 @@ public class GameManager : MonoBehaviour
                 timer.text = GetLevelTimeString();
                 if (levelTime == 0)
                 {
-                    gameState = GameState.Win;
-                    UiManager.instance.SetupUI();
-                    foreach (SliderScript slider in sliders)
-                    {
-                        slider.Reset();
-                        slider.SetWinState();
-                    }
+                    OnWin();
                 }
                 break;
 
