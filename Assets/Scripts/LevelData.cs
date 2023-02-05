@@ -9,7 +9,7 @@ public class LevelData : ScriptableObject
     public string levelName;
     public JokeScriptable[] jokes;
     public AnimationCurve moveCurve;
-    [Range(0,600)]
+    [Range(0,20)]
     public float levelLength;
     [Range(0, 1)]
     public float randomnessStrength;
