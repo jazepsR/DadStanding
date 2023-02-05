@@ -594,7 +594,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1823,6 +1823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugLevel: {fileID: 0}
   levels:
+  - {fileID: 11400000, guid: 6f27ef01e8335c54e93154c80ab313e9, type: 2}
   - {fileID: 11400000, guid: cd3c550f1ad2b1e4f83b2c06f2b9d064, type: 2}
   - {fileID: 11400000, guid: 4d0da95c28c784c40916b04225301902, type: 2}
   randomnessFactor: 1
@@ -1911,7 +1912,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1925,7 +1926,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1935708831}
   m_FillRect: {fileID: 2001520599}
   m_HandleRect: {fileID: 1935708830}
@@ -2809,7 +2810,7 @@ Animator:
   m_GameObject: {fileID: 1635021997}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d0af946ab1e12904885bd8c4f9cf67d6, type: 2}
+  m_Controller: {fileID: 9100000, guid: e7298f3870e31834dbaabb7254f90d19, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

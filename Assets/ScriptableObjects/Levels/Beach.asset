@@ -14,13 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Beach
   jokes:
+  - {fileID: 11400000, guid: b1e48b32e7b2869429f8bb232c79ed5d, type: 2}
   - {fileID: 11400000, guid: 1e48b3170b34e774195a751b1f5394a3, type: 2}
+  - {fileID: 11400000, guid: ca6a9cff9ed89cc45a6efa9b10e0a7b7, type: 2}
+  - {fileID: 11400000, guid: 1a72b69a5c55fb54580ae065f2bc5b76, type: 2}
+  - {fileID: 11400000, guid: 2b1fda55c7601ec418d84fa7df534be7, type: 2}
+  - {fileID: 11400000, guid: 4be1fad79a33baf408e9eb649992c84c, type: 2}
+  - {fileID: 11400000, guid: 10baa11189934704caf25979128ec8ce, type: 2}
+  - {fileID: 11400000, guid: 6aaa23b9f6dacdc4f995cfb8532f1e56, type: 2}
+  - {fileID: 11400000, guid: d3657f7411f732545962cd9abf19db82, type: 2}
+  - {fileID: 11400000, guid: e07b5a63430e0be4eb7fd53f97779e6a, type: 2}
+  - {fileID: 11400000, guid: 33c838b30e8d5e141af4402aeafcd3df, type: 2}
   moveCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.00094786653
-      value: 0.504717
+      time: 0.007980611
+      value: 0.0056981444
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -28,8 +38,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.07101916
-      value: 0.26602477
+      time: 0.08156507
+      value: -0.16841888
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -37,8 +47,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.15664963
-      value: 0.75211537
+      time: 0.3018555
+      value: 0.11645231
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -46,8 +56,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.21005838
-      value: 0.33614615
+      time: 0.49804264
+      value: -0.119962335
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -55,8 +65,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.3203789
-      value: 0.7735849
+      time: 0.70292026
+      value: 0.19964625
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -64,44 +74,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.38271952
-      value: 0.40472654
-      inSlope: -3.027526
-      outSlope: -3.027526
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.5127958
-      value: 0.19103773
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.58572143
-      value: 0.5433803
-      inSlope: -0.21680841
-      outSlope: -0.21680841
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.47689086
-    - serializedVersion: 3
-      time: 0.71753496
-      value: 0.7075472
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.8511841
-      value: 0.20990565
+      time: 0.84802765
+      value: -0.0020343363
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -111,11 +85,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelLength: 15
-  randomnessStrength: 0.048
-  randomnessMaxSpeed: 0.01
-  sliderMoveSpeed: 3.32
-  dampingTime: 0.13
+  levelLength: 10
+  randomnessStrength: 0.03
+  randomnessMaxSpeed: 0.02
+  sliderMoveSpeed: 1.5
+  dampingTime: 0.2
   controlType: 0
   gameplayBackground: {fileID: 21300000, guid: 714044a4066ed4943a2999408ffa0c71, type: 3}
   winBackground: {fileID: 21300000, guid: 5376e72c791075e498eb4eca4759ac07, type: 3}
