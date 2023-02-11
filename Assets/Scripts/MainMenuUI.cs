@@ -17,10 +17,10 @@ public class MainMenuUI : MonoBehaviour
     private void Update()
     {
      
-        if(Keyboard.current.escapeKey.wasPressedThisFrame)
+        if(Keyboard.current.escapeKey.wasPressedThisFrame )
         {
             Application.Quit();
-        }else if (Keyboard.current.anyKey.wasPressedThisFrame)
+        }else if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
             ShowTutorial();
     }
     public void ShowTutorial()

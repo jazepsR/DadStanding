@@ -86,8 +86,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   levelLength: 10
-  randomnessStrength: 0.03
-  randomnessMaxSpeed: 0.02
+  randomnessStrength: 0.054
+  randomnessMaxSpeed: 0.15
   sliderMoveSpeed: 1.5
   dampingTime: 0.2
   controlType: 0
