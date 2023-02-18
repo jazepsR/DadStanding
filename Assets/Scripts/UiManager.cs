@@ -17,6 +17,7 @@ public class UiManager : MonoBehaviour
     public GameObject winMenu;
     public GameObject winText;
     public GameObject winMenuButtons;
+    public TMP_Text winScore;
 
 
     [Header("lose menu")]
@@ -29,13 +30,32 @@ public class UiManager : MonoBehaviour
 
     [Header("gameplay menu")]
     public GameObject gameplayMenu;
-   
+    public TMP_Text scoreText;
+
     // Start is called before the first frame update
     void Awake()
     {
         instance = this;
     }
+    public void Update()
+    {
+        switch (GameManager.gameState)
+        {
+            case GameState.Starting:
+                break;
+            case GameState.Playing:
+                scoreText.text = string.Format("Score: {0}", GameManager.instance.score);
+                break;
+            case GameState.Win:
 
+                break;
+
+            case GameState.punchLine:
+                break;
+            case GameState.Fail:
+                break;
+        }
+    }
     // Update is called once per frame
     public void SetupUI()
     {
@@ -60,12 +80,12 @@ public class UiManager : MonoBehaviour
                 winText.SetActive(false);
                 speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
                 speechBubbleText.text = "As I was saying.. \n" +GameManager.instance.activeJoke.setupText;
+                winScore.text = string.Format("Score: {0}", GameManager.instance.score);
                 break;
 
             case GameState.punchLine:
                 winMenu.SetActive(true);
                 StartCoroutine(EnableWinButtons());
-                winText.SetActive(true);
                 speechBubblePunchline.SetActive(true);
                 speechBubblePunchlineText.text = GameManager.instance.activeJoke.punchlineText;
                 break;
@@ -84,7 +104,10 @@ public class UiManager : MonoBehaviour
 
     private IEnumerator EnableWinButtons()
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(1);
+        winScore.gameObject.SetActive(true);
+        winText.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
         winMenuButtons.SetActive(true);
     }
 
@@ -94,7 +117,8 @@ public class UiManager : MonoBehaviour
         winMenu.SetActive(false);
         loseMenu.SetActive(false);
         startMenu.SetActive(false);
-        winMenuButtons.SetActive(false); 
+        winMenuButtons.SetActive(false);
+        winScore.gameObject.SetActive(false);
         speechBubblePunchline.SetActive(false);
     }
 

@@ -83,7 +83,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelLength: 20
+  levelLength: 7
   randomnessStrength: 0.048
   randomnessMaxSpeed: 0.1
   sliderMoveSpeed: 1.5

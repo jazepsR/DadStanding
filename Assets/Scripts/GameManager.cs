@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public LevelData activeLevel;
     [SerializeField] private JokeScriptable[] generalJokes;
     [HideInInspector] public JokeScriptable activeJoke;
-
+    [HideInInspector] public int score = 0;
+    private float scoringIncrement = 0.2f;
+    private float scoringTimeStamp = 0;
     public SliderScript[] sliders;
+    private int winMultiplier = 10;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour
     }
     public void ResetLevel()
     {
+        score = 0;
         activeLevel = levels[levelIndex];
         gameState = GameState.Starting;
         activeJoke = GetNextJoke();
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour
         levelTime = level.levelLength;
         gameState = GameState.Playing;
         UiManager.instance.SetupUI();
+        scoringTimeStamp = Time.time;
         foreach(SliderScript slider in sliders)
         {
             slider.Reset();
@@ -118,6 +123,7 @@ public class GameManager : MonoBehaviour
     void OnWin()
     {
         gameState = GameState.Win;
+        score += winMultiplier * GetScoreIncreaseIncrement();
         UiManager.instance.SetupUI();
         foreach (SliderScript slider in sliders)
         {
@@ -138,6 +144,11 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    public int GetScoreIncreaseIncrement()
+    {
+         return sliders[0].GetSliderMultiplier();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -154,6 +165,11 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case GameState.Playing:
+                if(Time.time - scoringTimeStamp >scoringIncrement)
+                {
+                    scoringTimeStamp = Time.time;
+                    score += GetScoreIncreaseIncrement();
+                }
                 levelTime = Mathf.Max(0, levelTime - Time.deltaTime);
                 timer.text = GetLevelTimeString();
                 if (levelTime == 0)
