@@ -21,12 +21,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba403def46a7daa45a4db31df51174c8, type: 2}
   - {fileID: 11400000, guid: a42a7de4c4e1ab448b961507e94cde43, type: 2}
   - {fileID: 11400000, guid: 42baf37271ae09f418b5c624f1120b46, type: 2}
+  - {fileID: 11400000, guid: a12a3c57f4a49b54d92ca49a13ff70ca, type: 2}
   moveCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0.007980611
-      value: 0.0056981444
+      value: -0.0014712425
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -35,7 +36,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.08156507
-      value: -0.16841888
+      value: -0.09402275
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -43,8 +44,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.3018555
-      value: 0.11645231
+      time: 0.17667592
+      value: 0.0639262
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -52,8 +53,44 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.49804264
-      value: -0.119962335
+      time: 0.26273197
+      value: -0.14619082
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.397943
+      value: 0.11591938
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4661823
+      value: -0.036747314
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5667549
+      value: 0.07481999
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6449756
+      value: -0.051326532
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -62,7 +99,16 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.70292026
-      value: 0.19964625
+      value: 0.101621434
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7719547
+      value: -0.030406464
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -71,7 +117,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.84802765
-      value: -0.0020343363
+      value: -0.0055814283
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -81,13 +127,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelLength: 7
-  randomnessStrength: 0.048
-  randomnessMaxSpeed: 0.1
-  sliderMoveSpeed: 1.5
-  dampingTime: 0.1
+  levelLength: 20
+  randomnessStrength: 0.25
+  randomnessMaxSpeed: 0.17
+  sliderMoveSpeed: 1.35
+  dampingTime: 0.3
   controlType: 0
-  gameplayBackground: {fileID: 21300000, guid: a5f20df53d96ea045852d4300d3a7e83, type: 3}
+  gameplayBackground: {fileID: 21300000, guid: 42e99690e0102454486746e77be8dfa3, type: 3}
   winBackground: {fileID: 21300000, guid: 90f1b75174a1c6947b98af785c49a123, type: 3}
   loseBackground: {fileID: 21300000, guid: 43aa450d9e8558949be47a906e7896e0, type: 3}
-  dadAnimationController: {fileID: 9100000, guid: e07a5018a6c7ddd4ab6145bed5a6f342, type: 2}
+  dadAnimationController: {fileID: 9100000, guid: 888f3dbec2261454db799bbece9b33fc, type: 2}
