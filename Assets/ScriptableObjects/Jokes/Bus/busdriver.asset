@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e32c6d033e79447a0d395635701e03, type: 3}
+  m_Name: busdriver
+  m_EditorClassIdentifier: 
+  setupText: What is the difference between a bus driver and a cold?
+  setupAudio: {fileID: 8300000, guid: 42ecc56f07a0c1546a60aa6551320d12, type: 3}
+  punchlineText: One knows the stops, the other stops the nose!
+  punchlineAudio: {fileID: 8300000, guid: cb219a5f32285424081408f409f0579b, type: 3}
+  timesTold: 0

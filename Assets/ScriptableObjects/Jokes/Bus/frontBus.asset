@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e32c6d033e79447a0d395635701e03, type: 3}
+  m_Name: frontBus
+  m_EditorClassIdentifier: 
+  setupText: Did you hear about the man who ran in front of the bus?
+  setupAudio: {fileID: 8300000, guid: 43fadf09db7609a48bbd3f9ca67c7f94, type: 3}
+  punchlineText: He got tired!
+  punchlineAudio: {fileID: 8300000, guid: 9c0c977f8f905fc4994ae6bb41c3f8ec, type: 3}
+  timesTold: 0
