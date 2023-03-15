@@ -45,7 +45,16 @@ public class SliderScript : MonoBehaviour
                 ShowFeedback(sliderState);
             handleImage.color = GetStateColor(sliderState);
             prevSliderState = sliderState;
+            if(Keyboard.current.wKey.wasPressedThisFrame)
+            {
+                OnDodge();
+            }
+
         }
+    }
+    public void GetHit(float force)
+    {
+        balanceSlider.value += force;
     }
     public int GetSliderMultiplier()
     {
@@ -148,5 +157,10 @@ public class SliderScript : MonoBehaviour
     {
         if(GameManager.instance.activeLevel.controlType == ControlType.Tap)
             sliderSpeed -= value * GameManager.instance.activeLevel.sliderMoveSpeed;
+    }
+
+    private void OnDodge()
+    {
+        DadController.TriggerDodge();
     }
 }
