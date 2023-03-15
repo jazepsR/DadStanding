@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1e32c6d033e79447a0d395635701e03, type: 3}
-  m_Name: frog
+  m_Name: frog2
   m_EditorClassIdentifier: 
   setupText: What did the bus conductor say to the frog?
   setupAudio: {fileID: 8300000, guid: 90e5f8f391f28bf42ae4992fb759c42b, type: 3}
-  punchlineText: Hop on!
-  punchlineAudio: {fileID: 8300000, guid: 31854853214e7c1429b339d0f6de4674, type: 3}
-  timesTold: 1
+  punchlineText: I have no idea, I don't speak french!
+  punchlineAudio: {fileID: 8300000, guid: 498a78bbe869282479942b90cb63e82f, type: 3}
+  timesTold: 0
