@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameState gameState = GameState.Starting;
     public static GameManager instance;
+    public Transform projectilePointR, projectilePointL;
     [SerializeField] private LevelData debugLevel;
     [SerializeField] private LevelData[] levels;
     private int levelIndex= 0;
@@ -81,7 +82,6 @@ public class GameManager : MonoBehaviour
         {
             slider.Reset();
         }
-
     }
     public void SetLoseState()
     {
