@@ -9,7 +9,7 @@ public class DadController : MonoBehaviour
     Collider2D dadBody;
     [SerializeField] private SliderScript slider;
     Material dadMaterial;
-    float flashTime = 0.2f;
+    float flashTime = 0.1f;
 
     private void Awake()
     {
@@ -48,14 +48,18 @@ public class DadController : MonoBehaviour
             {
                 slider.GetHit(projectile.moveSpeed > 0? GameManager.instance.activeLevel.projectileStrenght : -GameManager.instance.activeLevel.projectileStrenght);
             }
-            dadMaterial.SetFloat("_FlashAmount", 1);
-            StartCoroutine(DisableFlash());
+            StartCoroutine(Falsh());
             GameManager.instance.score -= 20;
         }
     }
 
-    IEnumerator DisableFlash()
+    IEnumerator Falsh()
     {
+        dadMaterial.SetFloat("_FlashAmount", 1);
+        yield return new WaitForSeconds(flashTime);
+        dadMaterial.SetFloat("_FlashAmount", 0);
+        yield return new WaitForSeconds(flashTime);
+        dadMaterial.SetFloat("_FlashAmount", 1);
         yield return new WaitForSeconds(flashTime);
         dadMaterial.SetFloat("_FlashAmount", 0);
 
