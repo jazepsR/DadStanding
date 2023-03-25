@@ -40,7 +40,11 @@ public class DadController : MonoBehaviour
         {
             Debug.LogError("got hit by projectile trigger");
             Destroy(collision.gameObject);
-            slider.GetHit(-0.5f);
+            projectile projectile = collision.gameObject.GetComponent<projectile>();
+            if (projectile)
+            {
+                slider.GetHit(projectile.moveSpeed > 0? GameManager.instance.activeLevel.projectileStrenght : -GameManager.instance.activeLevel.projectileStrenght);
+            }
         }
     }
     public void SetWinState()

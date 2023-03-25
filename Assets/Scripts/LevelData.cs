@@ -8,7 +8,6 @@ public class LevelData : ScriptableObject
 {
     public string levelName;
     public JokeScriptable[] jokes;
-    public Dictionary<float,bool> projectileData = new Dictionary<float, bool>();
     public AnimationCurve moveCurve;
     [Range(0,20)]
     public float levelLength;
@@ -20,7 +19,9 @@ public class LevelData : ScriptableObject
     public ControlType controlType = ControlType.Tap;
     public Sprite gameplayBackground, winBackground, loseBackground;
     public RuntimeAnimatorController dadAnimationController;
-    public GameObject projectile;
+    public projectile projectile;
+    public float projectileStrenght = 0.5f;
+    public List<ProjectileData> projectileData;
 
 
     public float GetSpeedAdjustment(float completionPercentage)
@@ -35,6 +36,6 @@ public class ProjectileData
     {
     public bool isLeft = true;
     public float launchTime;
-    [HideInInspector] public bool launched = false;
+    public bool launched = false;
 
 }

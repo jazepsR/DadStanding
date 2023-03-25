@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = -0.3f;
+    public float moveSpeed = -0.3f;
     // Start is called before the first frame update
     void Start()
     {

@@ -82,6 +82,10 @@ public class GameManager : MonoBehaviour
         {
             slider.Reset();
         }
+        foreach(ProjectileData data in activeLevel.projectileData)
+        {
+            data.launched = false;
+        }
     }
     public void SetLoseState()
     {
@@ -172,6 +176,21 @@ public class GameManager : MonoBehaviour
                 }
                 levelTime = Mathf.Max(0, levelTime - Time.deltaTime);
                 timer.text = GetLevelTimeString();
+                float time =Mathf.Abs(levelTime- activeLevel.levelLength);
+                foreach (ProjectileData data in activeLevel.projectileData)
+                { 
+                    if(!data.launched && time > data.launchTime && activeLevel.projectile != null)
+                    {
+                        data.launched = true;
+                        Transform launchPoint = data.isLeft ? projectilePointL : projectilePointR;
+                        projectile projectile = Instantiate(activeLevel.projectile, launchPoint);
+                        if (!data.isLeft)
+                            projectile.moveSpeed= projectile.moveSpeed*-1f;
+                        projectile.transform.localPosition = Vector3.zero;
+                    }
+                }
+
+
                 if (levelTime == 0)
                 {
                     OnWin();
