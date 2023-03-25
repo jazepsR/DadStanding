@@ -50,6 +50,7 @@ public class DadController : MonoBehaviour
             }
             dadMaterial.SetFloat("_FlashAmount", 1);
             StartCoroutine(DisableFlash());
+            GameManager.instance.score -= 20;
         }
     }
 

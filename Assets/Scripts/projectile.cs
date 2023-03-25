@@ -16,5 +16,7 @@ public class projectile : MonoBehaviour
     {
         if(GameManager.gameState == GameState.Playing)
             transform.position += Vector3.right * moveSpeed;
+        if (GameManager.gameState == GameState.Fail || GameManager.gameState == GameState.Win)
+            Destroy(gameObject);
     }
 }
