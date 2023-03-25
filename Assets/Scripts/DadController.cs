@@ -8,10 +8,13 @@ public class DadController : MonoBehaviour
     float sliderValue = 0;
     Collider2D dadBody;
     [SerializeField] private SliderScript slider;
+    Material dadMaterial;
+    float flashTime = 0.2f;
 
     private void Awake()
     {
         dadBody = GetComponent<Collider2D>();
+        dadMaterial = GetComponent<SpriteRenderer>().material;
     }
 
 
@@ -45,7 +48,16 @@ public class DadController : MonoBehaviour
             {
                 slider.GetHit(projectile.moveSpeed > 0? GameManager.instance.activeLevel.projectileStrenght : -GameManager.instance.activeLevel.projectileStrenght);
             }
+            dadMaterial.SetFloat("_FlashAmount", 1);
+            StartCoroutine(DisableFlash());
         }
+    }
+
+    IEnumerator DisableFlash()
+    {
+        yield return new WaitForSeconds(flashTime);
+        dadMaterial.SetFloat("_FlashAmount", 0);
+
     }
     public void SetWinState()
     {
