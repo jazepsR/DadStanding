@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7943281324184020348}
   - component: {fileID: 7943281324184020345}
   m_Layer: 0
-  m_Name: grillProjectile
+  m_Name: beachProjectile
   m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 19f3e3dbbf952344ab73749fd0dae66b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c7d776494a88ca44b558e8e8c062bb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f82fb43fc7a4234c9f039e6c10e91bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.1
+  moveSpeed: 0.2
