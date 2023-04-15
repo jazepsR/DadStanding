@@ -2044,6 +2044,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d0da95c28c784c40916b04225301902, type: 2}
   - {fileID: 11400000, guid: 6f27ef01e8335c54e93154c80ab313e9, type: 2}
   - {fileID: 11400000, guid: 16a8326625207e84cbfd9bb1ac474622, type: 2}
+  - {fileID: 11400000, guid: b4b1450451b34c14da3951a88fbfb7a9, type: 2}
   randomnessFactor: 1
   timer: {fileID: 436567796}
   activeLevel: {fileID: 0}
@@ -3365,7 +3366,7 @@ Animator:
   m_GameObject: {fileID: 1635021997}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e07a5018a6c7ddd4ab6145bed5a6f342, type: 2}
+  m_Controller: {fileID: 9100000, guid: 91f22af84fef55c479bf55dba8276343, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

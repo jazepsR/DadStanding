@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public Transform projectilePointR, projectilePointL;
     [SerializeField] private LevelData debugLevel;
     [SerializeField] private LevelData[] levels;
-    private int levelIndex= 0;
+    public static int levelIndex= 0;
     [SerializeField] private float randomnessFactor = 4f;
     public TMP_Text timer;
     private float levelTime;
