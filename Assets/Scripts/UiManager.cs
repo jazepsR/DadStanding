@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class UiManager : MonoBehaviour
     [Header("lose menu")]
     public GameObject loseMenu;
     public TMP_Text loseTime;
+    public TMP_Text loseScore;
 
     [Header("start menu")]
     public GameObject startMenu;
@@ -57,6 +59,12 @@ public class UiManager : MonoBehaviour
         }
     }
     // Update is called once per frame
+
+    public void GoToLevelSelect()
+    {
+        MainMenuUI.openLevel = true;
+        SceneManager.LoadScene(0);
+    }
     public void SetupUI()
     {
         DisableUI();
@@ -92,6 +100,7 @@ public class UiManager : MonoBehaviour
             case GameState.Fail:
                 StartCoroutine(EnableLoseMenu());
                 speechBubble.SetActive(false);
+                loseScore.text = string.Format("Score: {0}", GameManager.instance.score);
                 break;
         }
     }

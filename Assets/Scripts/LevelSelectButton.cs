@@ -19,7 +19,7 @@ public class LevelSelectButton : MonoBehaviour
         locked = levelID> PlayerPrefs.GetInt(GameManager.saveKey, 0);
         lockObj.SetActive(locked);
         unlockObj.SetActive(!locked);
-        GetComponent<Button>().interactable = !locked;
+        //GetComponent<Button>().interactable = !locked;
     }
 
     // Update is called once per frame

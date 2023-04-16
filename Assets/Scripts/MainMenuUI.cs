@@ -13,6 +13,7 @@ public class MainMenuUI : MonoBehaviour
     public TMP_Text levelSelectTitle;
     public TMP_Text levelSelectDescription;
     public static MainMenuUI instance;
+    public static bool openLevel = false;
 
     private void Awake()
     {
@@ -24,6 +25,11 @@ public class MainMenuUI : MonoBehaviour
         levelMenu.SetActive(false);
         tutorial.SetActive(false);
         clickToStart.SetActive(true);
+        if(openLevel)
+        {
+            mainMenu.SetActive(false);
+            levelMenu.SetActive(true);
+        }
     }
     private void Update()
     {
