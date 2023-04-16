@@ -10,12 +10,14 @@ public class LevelSelectButton : MonoBehaviour
     public string levelDescription;
     public int levelID;
     public GameObject lockObj;
+    public GameObject unlockObj;
     private bool locked = false;
     // Start is called before the first frame update
     void Start()
     {
        locked = levelID> PlayerPrefs.GetInt(GameManager.saveKey, 0);
        lockObj.SetActive(locked);
+        unlockObj.SetActive(!locked);
     }
 
     // Update is called once per frame
