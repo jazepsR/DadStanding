@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     private float scoringTimeStamp = 0;
     public SliderScript[] sliders;
     private int winMultiplier = 10;
+    public static string saveKey = "levelSave";
     // Start is called before the first frame update
     private void Awake()
     {
@@ -136,6 +137,8 @@ public class GameManager : MonoBehaviour
         }
         SoundController.instance.PlayJoke(activeJoke);
         activeJoke.timesTold++;
+        PlayerPrefs.SetInt(saveKey, levelIndex + 1);
+        PlayerPrefs.Save();
     }
 
     public void OnPunchline()
