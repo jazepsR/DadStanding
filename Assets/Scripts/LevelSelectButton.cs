@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelSelectButton : MonoBehaviour
 {
@@ -15,9 +16,10 @@ public class LevelSelectButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       locked = levelID> PlayerPrefs.GetInt(GameManager.saveKey, 0);
-       lockObj.SetActive(locked);
+        locked = levelID> PlayerPrefs.GetInt(GameManager.saveKey, 0);
+        lockObj.SetActive(locked);
         unlockObj.SetActive(!locked);
+        GetComponent<Button>().interactable = !locked;
     }
 
     // Update is called once per frame
