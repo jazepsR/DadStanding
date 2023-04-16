@@ -34,7 +34,7 @@ MonoBehaviour:
   winBackground: {fileID: 21300000, guid: 5376e72c791075e498eb4eca4759ac07, type: 3}
   loseBackground: {fileID: 21300000, guid: ab781cac2156e144bb501f9c16e6faaf, type: 3}
   dadAnimationController: {fileID: 9100000, guid: d0af946ab1e12904885bd8c4f9cf67d6, type: 2}
-  projectile: {fileID: 7943281324184020345, guid: dc454cf0ec3109540a616f8e6b67ca90, type: 3}
+  projectile: {fileID: 7943281324184020345, guid: ba45974f4255cfa488e594e827a9e259, type: 3}
   projectileStrenght: 0.3
   moveData:
   - isLeft: 1
@@ -70,4 +70,4 @@ MonoBehaviour:
     launched: 1
   - isLeft: 0
     launchTime: 5
-    launched: 1
+    launched: 0

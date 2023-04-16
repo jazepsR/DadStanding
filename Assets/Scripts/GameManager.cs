@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Fail;
         UiManager.instance.SetupUI();
+        SoundController.instance.PlayLose();
     }
 
     public string GetLevelTimeString()

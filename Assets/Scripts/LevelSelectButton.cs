@@ -32,9 +32,14 @@ public class LevelSelectButton : MonoBehaviour
     {
         if (!locked)
         {
-            GameManager.levelIndex = levelID;
-            SceneManager.LoadScene(1);
+            Invoke(nameof(LoadLevel), 0.15f);
         }
+    }
+
+    private void LoadLevel()
+    {
+        GameManager.levelIndex = levelID;
+        SceneManager.LoadScene(1);
     }
     public void SetupLvlSelectScreen()
     {
