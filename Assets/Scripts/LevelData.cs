@@ -10,8 +10,6 @@ public class LevelData : ScriptableObject
     public JokeScriptable[] jokes;
    // [HideInInspector]
     public float levelLength;
-    [Range(0, 1)]
-    public float randomnessMaxSpeed = 0.1f;
     public float sliderMoveSpeed=1;
     public float dampingTime = 0.25f;
     public ControlType controlType = ControlType.Tap;
@@ -31,7 +29,7 @@ public class LevelData : ScriptableObject
         {
             if((currentCompletionPercentage + moveData.time/levelLength)>= completionPercentage)
             {
-                return moveData.isLeft ? moveData.strenght/10 : -moveData.strenght/10;
+                return moveData.isLeft ? moveData.strenght/50 : -moveData.strenght/50;
             }
             else
             {

@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LevelData debugLevel;
     [SerializeField] private LevelData[] levels;
     public static int levelIndex= 0;
-    [SerializeField] private float randomnessFactor = 4f;
     public TMP_Text timer;
     private float levelTime;
     [HideInInspector] public LevelData activeLevel;
@@ -40,7 +39,7 @@ public class GameManager : MonoBehaviour
     {
         if(activeLevel)
         {
-            return Mathf.Clamp(activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength) * randomnessFactor, -activeLevel.randomnessMaxSpeed, activeLevel.randomnessMaxSpeed) ;
+            return activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength);
         }
         return 0;
     }

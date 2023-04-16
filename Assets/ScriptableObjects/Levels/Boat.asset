@@ -22,8 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 386c333cb3a2ce943a94fbd9d1fc8f61, type: 2}
   - {fileID: 11400000, guid: f1e66d8a33abc844794f665c1e712fce, type: 2}
   - {fileID: 11400000, guid: b19a0dec4044a334f9ea4145baf25da5, type: 2}
-  levelLength: 10
-  randomnessMaxSpeed: 0.1
+  levelLength: 13
   sliderMoveSpeed: 2
   dampingTime: 0.2
   controlType: 0
@@ -39,25 +38,37 @@ MonoBehaviour:
     strenght: 1
   - isLeft: 0
     time: 2
-    strenght: 2
+    strenght: 1
   - isLeft: 1
     time: 0.5
-    strenght: 2
+    strenght: 1
   - isLeft: 0
     time: 0.5
-    strenght: 4
+    strenght: 1
   - isLeft: 1
     time: 0.5
-    strenght: 4
+    strenght: 1
   - isLeft: 0
     time: 0.5
-    strenght: 4
+    strenght: 1
   - isLeft: 1
     time: 2
-    strenght: 5
+    strenght: 1
   - isLeft: 0
-    time: 2
-    strenght: 5
+    time: 1
+    strenght: 1
+  - isLeft: 0
+    time: 1
+    strenght: 1
+  - isLeft: 0
+    time: 1
+    strenght: 2
+  - isLeft: 1
+    time: 1
+    strenght: 1
+  - isLeft: 1
+    time: 1
+    strenght: 2
   projectileData:
   - isLeft: 0
     launchTime: 3

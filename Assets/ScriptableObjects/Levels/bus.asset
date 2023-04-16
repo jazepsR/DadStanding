@@ -22,8 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a42a7de4c4e1ab448b961507e94cde43, type: 2}
   - {fileID: 11400000, guid: 42baf37271ae09f418b5c624f1120b46, type: 2}
   - {fileID: 11400000, guid: a12a3c57f4a49b54d92ca49a13ff70ca, type: 2}
-  levelLength: 10
-  randomnessMaxSpeed: 0.17
+  levelLength: 17.5
   sliderMoveSpeed: 1.35
   dampingTime: 0.3
   controlType: 0
@@ -31,31 +30,67 @@ MonoBehaviour:
   winBackground: {fileID: 21300000, guid: 90f1b75174a1c6947b98af785c49a123, type: 3}
   loseBackground: {fileID: 21300000, guid: 43aa450d9e8558949be47a906e7896e0, type: 3}
   dadAnimationController: {fileID: 9100000, guid: 888f3dbec2261454db799bbece9b33fc, type: 2}
-  projectile: {fileID: 0}
-  projectileStrenght: 0.5
+  projectile: {fileID: 7943281324184020345, guid: ffbabdd7b580f60479df9da12733a46c, type: 3}
+  projectileStrenght: 0.2
   moveData:
   - isLeft: 1
+    time: 1
+    strenght: 0.1
+  - isLeft: 0
     time: 2
+    strenght: 0.5
+  - isLeft: 1
+    time: 0.5
+    strenght: 0.5
+  - isLeft: 0
+    time: 0.5
     strenght: 1
+  - isLeft: 1
+    time: 0.5
+    strenght: 1.5
   - isLeft: 0
-    time: 2
+    time: 3
     strenght: 2
   - isLeft: 1
-    time: 0.5
+    time: 2
+    strenght: 1.5
+  - isLeft: 0
+    time: 1
     strenght: 2
   - isLeft: 0
-    time: 0.5
-    strenght: 4
-  - isLeft: 1
-    time: 0.5
-    strenght: 4
-  - isLeft: 0
-    time: 0.5
-    strenght: 4
-  - isLeft: 1
     time: 2
-    strenght: 5
+    strenght: 1.5
+  - isLeft: 1
+    time: 3
+    strenght: 2
   - isLeft: 0
-    time: 2
-    strenght: 5
-  projectileData: []
+    time: 1
+    strenght: 2.5
+  - isLeft: 1
+    time: 1
+    strenght: 2.5
+  projectileData:
+  - isLeft: 0
+    launchTime: 1
+    launched: 1
+  - isLeft: 0
+    launchTime: 2
+    launched: 1
+  - isLeft: 0
+    launchTime: 3
+    launched: 1
+  - isLeft: 1
+    launchTime: 7
+    launched: 1
+  - isLeft: 1
+    launchTime: 8
+    launched: 1
+  - isLeft: 1
+    launchTime: 9
+    launched: 1
+  - isLeft: 0
+    launchTime: 13
+    launched: 1
+  - isLeft: 0
+    launchTime: 14
+    launched: 1

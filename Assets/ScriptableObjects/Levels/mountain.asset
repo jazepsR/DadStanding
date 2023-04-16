@@ -22,16 +22,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5154249e3ea25034881967595e5512e7, type: 2}
   - {fileID: 11400000, guid: 0ad9b23e6ba59b6429eaa2e6bb9432ce, type: 2}
   - {fileID: 11400000, guid: 348aeda58b3d40149895a31529897d08, type: 2}
-  levelLength: 10
-  randomnessMaxSpeed: 0.1
-  sliderMoveSpeed: 1.5
+  levelLength: 12
+  sliderMoveSpeed: 4
   dampingTime: 0.1
   controlType: 0
   gameplayBackground: {fileID: 21300000, guid: d06588883910ddb49a3a5b6362c7e9b0, type: 3}
   winBackground: {fileID: 21300000, guid: c63c0ef85155e864fa59e36fd60adfe2, type: 3}
   loseBackground: {fileID: 21300000, guid: 1f6318fe5cb22134c9abc65e4491d1ad, type: 3}
   dadAnimationController: {fileID: 9100000, guid: 91f22af84fef55c479bf55dba8276343, type: 2}
-  projectile: {fileID: 0}
+  projectile: {fileID: 7943281324184020345, guid: 2f59957f7c52de04da9c96ef66d99554, type: 3}
   projectileStrenght: 0.5
   moveData:
   - isLeft: 1
@@ -58,4 +57,19 @@ MonoBehaviour:
   - isLeft: 0
     time: 2
     strenght: 5
-  projectileData: []
+  - isLeft: 0
+    time: 2
+    strenght: 7
+  projectileData:
+  - isLeft: 0
+    launchTime: 0
+    launched: 1
+  - isLeft: 0
+    launchTime: 2
+    launched: 1
+  - isLeft: 0
+    launchTime: 10
+    launched: 1
+  - isLeft: 0
+    launchTime: 11
+    launched: 1
