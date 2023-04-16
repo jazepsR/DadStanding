@@ -25,70 +25,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3657f7411f732545962cd9abf19db82, type: 2}
   - {fileID: 11400000, guid: e07b5a63430e0be4eb7fd53f97779e6a, type: 2}
   - {fileID: 11400000, guid: 33c838b30e8d5e141af4402aeafcd3df, type: 2}
-  moveCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.007980611
-      value: 0.0056981444
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.08156507
-      value: -0.16841888
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.3018555
-      value: 0.11645231
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.49804264
-      value: -0.119962335
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.70292026
-      value: 0.19964625
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.84802765
-      value: -0.0020343363
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   levelLength: 10
-  randomnessStrength: 0.054
   randomnessMaxSpeed: 0.15
-  sliderMoveSpeed: 1.5
+  sliderMoveSpeed: 3
   dampingTime: 0.2
   controlType: 0
   gameplayBackground: {fileID: 21300000, guid: 714044a4066ed4943a2999408ffa0c71, type: 3}
@@ -97,13 +36,38 @@ MonoBehaviour:
   dadAnimationController: {fileID: 9100000, guid: d0af946ab1e12904885bd8c4f9cf67d6, type: 2}
   projectile: {fileID: 7943281324184020345, guid: dc454cf0ec3109540a616f8e6b67ca90, type: 3}
   projectileStrenght: 0.3
+  moveData:
+  - isLeft: 1
+    time: 2
+    strenght: 1
+  - isLeft: 0
+    time: 2
+    strenght: 2
+  - isLeft: 1
+    time: 0.5
+    strenght: 2
+  - isLeft: 0
+    time: 0.5
+    strenght: 4
+  - isLeft: 1
+    time: 0.5
+    strenght: 4
+  - isLeft: 0
+    time: 0.5
+    strenght: 4
+  - isLeft: 1
+    time: 2
+    strenght: 5
+  - isLeft: 0
+    time: 2
+    strenght: 5
   projectileData:
   - isLeft: 0
     launchTime: 3
-    launched: 0
+    launched: 1
   - isLeft: 0
     launchTime: 4
-    launched: 0
+    launched: 1
   - isLeft: 0
     launchTime: 5
-    launched: 0
+    launched: 1

@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         if(activeLevel)
         {
-            return Mathf.Clamp( activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength)* randomnessFactor, -activeLevel.randomnessMaxSpeed, activeLevel.randomnessMaxSpeed);
+            return Mathf.Clamp(activeLevel.GetSpeedAdjustment(levelTime / activeLevel.levelLength) * randomnessFactor, -activeLevel.randomnessMaxSpeed, activeLevel.randomnessMaxSpeed) ;
         }
         return 0;
     }

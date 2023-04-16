@@ -22,68 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5154249e3ea25034881967595e5512e7, type: 2}
   - {fileID: 11400000, guid: 0ad9b23e6ba59b6429eaa2e6bb9432ce, type: 2}
   - {fileID: 11400000, guid: 348aeda58b3d40149895a31529897d08, type: 2}
-  moveCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.007980611
-      value: 0.0056981444
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.08156507
-      value: -0.16841888
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.3018555
-      value: 0.11645231
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.49804264
-      value: -0.119962335
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.70292026
-      value: 0.19964625
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.84802765
-      value: -0.0020343363
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  levelLength: 7
-  randomnessStrength: 0.048
+  levelLength: 10
   randomnessMaxSpeed: 0.1
   sliderMoveSpeed: 1.5
   dampingTime: 0.1
@@ -94,4 +33,29 @@ MonoBehaviour:
   dadAnimationController: {fileID: 9100000, guid: 91f22af84fef55c479bf55dba8276343, type: 2}
   projectile: {fileID: 0}
   projectileStrenght: 0.5
+  moveData:
+  - isLeft: 1
+    time: 2
+    strenght: 1
+  - isLeft: 0
+    time: 2
+    strenght: 2
+  - isLeft: 1
+    time: 0.5
+    strenght: 2
+  - isLeft: 0
+    time: 0.5
+    strenght: 4
+  - isLeft: 1
+    time: 0.5
+    strenght: 4
+  - isLeft: 0
+    time: 0.5
+    strenght: 4
+  - isLeft: 1
+    time: 2
+    strenght: 5
+  - isLeft: 0
+    time: 2
+    strenght: 5
   projectileData: []
