@@ -45,7 +45,7 @@ public class SliderScript : MonoBehaviour
                 ShowFeedback(sliderState);
             handleImage.color = GetStateColor(sliderState);
             prevSliderState = sliderState;
-            if(Keyboard.current.wKey.wasPressedThisFrame)
+            if(Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame)
             {
                 OnDodge();
             }

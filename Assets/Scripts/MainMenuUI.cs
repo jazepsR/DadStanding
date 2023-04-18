@@ -7,6 +7,7 @@ using TMPro;
 public class MainMenuUI : MonoBehaviour
 {
     public GameObject tutorial;
+    public GameObject fade;
     public GameObject clickToStart;
     public GameObject mainMenu;
     public GameObject levelMenu;
@@ -22,6 +23,7 @@ public class MainMenuUI : MonoBehaviour
     private void Start()
     {
         mainMenu.SetActive(true);
+        fade.SetActive(false);
         levelMenu.SetActive(false);
         tutorial.SetActive(false);
         clickToStart.SetActive(true);
@@ -51,6 +53,10 @@ public class MainMenuUI : MonoBehaviour
     {
         levelSelectDescription.text = "";
         levelSelectTitle.text = "";
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
     public void ShowTutorial()
     {

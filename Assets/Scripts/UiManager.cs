@@ -18,6 +18,7 @@ public class UiManager : MonoBehaviour
     public GameObject winMenu;
     public GameObject winText;
     public GameObject winMenuButtons;
+    public GameObject nextLevelButton;
     public TMP_Text winScore;
 
 
@@ -89,6 +90,7 @@ public class UiManager : MonoBehaviour
                 speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
                 speechBubbleText.text = "As I was saying.. \n" +GameManager.instance.activeJoke.setupText;
                 winScore.text = string.Format("Score: {0}", GameManager.instance.score);
+                nextLevelButton.SetActive(GameManager.levelIndex+1 < GameManager.instance.levels.Length);
                 break;
 
             case GameState.punchLine:

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Transform projectilePointR, projectilePointL;
     [SerializeField] private LevelData debugLevel;
-    [SerializeField] private LevelData[] levels;
+    [SerializeField] public LevelData[] levels;
     public static int levelIndex= 0;
     public TMP_Text timer;
     private float levelTime;

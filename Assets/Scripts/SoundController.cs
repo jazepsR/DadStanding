@@ -20,6 +20,8 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip getHit2;
     [SerializeField] private AudioClip click;
     [SerializeField] private AudioClip levelStartClick;
+    [SerializeField] private AudioClip chuckle;
+    [SerializeField] private AudioClip error;
 
     private List<AudioClip> winClips = new List<AudioClip>();
     private void Awake()
@@ -34,7 +36,10 @@ public class SoundController : MonoBehaviour
         if (joke.setupAudio && joke.punchlineAudio)
             StartCoroutine(PlayJokeCoroutine(joke));
     }
-
+    public void PlayError()
+    {
+        source.PlayOneShot(error);
+    }
     public void PlaySetup(JokeScriptable joke)
     {
         if(joke.setupAudio)
@@ -52,7 +57,10 @@ public class SoundController : MonoBehaviour
         yield return new WaitForSecondsRealtime(joke.punchlineAudio.length + 0.2f);
         source.PlayOneShot(badumTss);
         yield return new WaitForSecondsRealtime(0.35f);
-        source.PlayOneShot(winClips[Random.Range(0,winClips.Count)]);
+        if (GameManager.levelIndex == 2)
+            source.PlayOneShot(chuckle);
+        else
+            source.PlayOneShot(winClips[Random.Range(0,winClips.Count)]);
     }
 
     public void PlayLose()

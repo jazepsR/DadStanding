@@ -30,9 +30,15 @@ public class LevelSelectButton : MonoBehaviour
 
     public void StartLevel()
     {
-        if (!locked)
+        if (locked)
         {
-            Invoke(nameof(LoadLevel), 0.15f);
+            SoundController.instance.PlayError();
+        }
+            else
+        {
+            Invoke(nameof(LoadLevel), 3f);
+            MainMenuUI.instance.fade.SetActive(true);
+            SoundController.instance.LevelStartClick();
         }
     }
 

@@ -41,7 +41,7 @@ public class DadController : MonoBehaviour
     {
         if(collision.tag == "projectile")
         {
-            Debug.LogError("got hit by projectile trigger");
+            //Debug.LogError("got hit by projectile trigger");
             Destroy(collision.gameObject);
             projectile projectile = collision.gameObject.GetComponent<projectile>();
             if (projectile)

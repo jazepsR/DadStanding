@@ -153,3 +153,5 @@ MonoBehaviour:
   getHit2: {fileID: 8300000, guid: c0f963b758b88764e982606d5499eb6d, type: 3}
   click: {fileID: 8300000, guid: bbcb6834d38865744b814121bfd49217, type: 3}
   levelStartClick: {fileID: 8300000, guid: 9658f8b9050cb9244bb84735582ce963, type: 3}
+  chuckle: {fileID: 8300000, guid: 206481daf83bf664f8f6141ada4c87dc, type: 3}
+  error: {fileID: 8300000, guid: a35a70e282489ea48a66738f4dbc243f, type: 3}

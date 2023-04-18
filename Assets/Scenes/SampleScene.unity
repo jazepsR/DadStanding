@@ -1152,6 +1152,7 @@ MonoBehaviour:
   winMenu: {fileID: 1623412091}
   winText: {fileID: 155967958}
   winMenuButtons: {fileID: 2047043182}
+  nextLevelButton: {fileID: 1079285352}
   winScore: {fileID: 806629818}
   loseMenu: {fileID: 713229655}
   loseTime: {fileID: 1564816694}
