@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class UiManager : MonoBehaviour
 {
     public static UiManager instance;
@@ -21,6 +21,7 @@ public class UiManager : MonoBehaviour
     public GameObject nextLevelButton;
     public GameObject allJokesSeen;
     public TMP_Text winScore;
+    public Text nextLevelText;
 
 
     [Header("lose menu")]
@@ -91,7 +92,15 @@ public class UiManager : MonoBehaviour
                 speechBubbleText.text = GameManager.instance.activeJoke.punchlineText;
                 speechBubbleText.text = "As I was saying.. \n" +GameManager.instance.activeJoke.setupText;
                 winScore.text = string.Format("Score: {0}", GameManager.instance.score);
-                nextLevelButton.SetActive(GameManager.levelIndex+1 < GameManager.instance.levels.Length);
+                //nextLevelButton.SetActive(GameManager.levelIndex+1 < GameManager.instance.levels.Length);
+                if(GameManager.levelIndex + 1 < GameManager.instance.levels.Length)
+                {
+                    nextLevelText.text = "Next Level >";
+                }
+                else
+                {
+                    nextLevelText.text = "Finish Game >";
+                }
                 allJokesSeen.SetActive(GameManager.instance.activeLevel.GetJokesTold() >= GameManager.instance.activeLevel.jokes.Length);
                 break;
 
@@ -142,6 +151,14 @@ public class UiManager : MonoBehaviour
 
     public void NextLevel()
     {
-        GameManager.instance.NextLevel();
+        if (GameManager.levelIndex + 1 < GameManager.instance.levels.Length)
+        {
+            GameManager.instance.NextLevel();
+        }
+        else
+        {
+            MainMenuUI.openHighScore = true;
+            SceneManager.LoadScene(0);
+        }
     }
 }

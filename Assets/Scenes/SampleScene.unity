@@ -1155,6 +1155,7 @@ MonoBehaviour:
   nextLevelButton: {fileID: 1079285352}
   allJokesSeen: {fileID: 1929165295}
   winScore: {fileID: 806629818}
+  nextLevelText: {fileID: 1411778857}
   loseMenu: {fileID: 713229655}
   loseTime: {fileID: 1564816694}
   loseScore: {fileID: 74532499}
