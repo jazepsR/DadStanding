@@ -15,6 +15,8 @@ public class MainMenuUI : MonoBehaviour
     public GameObject levelMenu;
     public TMP_Text levelSelectTitle;
     public TMP_Text levelSelectDescription;
+    public GameObject highScoreNameInput;
+    public TMP_Text highScoreNameText;
     public static MainMenuUI instance;
     public static bool openLevel = false;
     public static bool openHighScore = false;
@@ -32,6 +34,7 @@ public class MainMenuUI : MonoBehaviour
         fade.SetActive(false);
         levelMenu.SetActive(false);
         tutorial.SetActive(false);
+        highScoreNameInput.gameObject.SetActive(false);
         clickToStart.SetActive(true);
         if(openLevel)
         {
@@ -47,6 +50,7 @@ public class MainMenuUI : MonoBehaviour
             highScore.SetActive(true);
             levelMenu.SetActive(false);
             openHighScore = false;
+            highScoreNameInput.gameObject.SetActive(true);
         }
     }
 
@@ -58,16 +62,19 @@ public class MainMenuUI : MonoBehaviour
         levelMenu.SetActive(false);
     }
 
+    public void AddHighScore()
+    {
+        highScores.Add(new HighScoreData(highScoreNameText.text, GameManager.totalScore));
+        GameManager.totalScore = 0;
+        highScoreNameInput.gameObject.SetActive(false);
+        SetupHighScore();
+    }
+
     public void SetupHighScore()
     {
         foreach(Transform child in highScoreParent)
         {
             Destroy(child.gameObject);
-        }
-        if (openHighScore)
-        {
-            highScores.Add(new HighScoreData("NEW DAD", GameManager.totalScore));
-            GameManager.totalScore = 0;
         }
         highScores = highScores.OrderBy(p => p.score).ToList();
         highScores.Reverse();
@@ -117,6 +124,7 @@ public class HighScoreData
 {
     public string nameString;
     public int score;
+    [HideInInspector] public bool playerScore;
 
     public HighScoreData(string nameString, int score)
     {
