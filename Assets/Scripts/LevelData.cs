@@ -38,6 +38,18 @@ public class LevelData : ScriptableObject
         }
         return jokesTold;
     }
+
+    public void SaveFallTimes()
+    {
+        int fallTimes =PlayerPrefs.GetInt("fallTimes" + name)+1;
+        PlayerPrefs.SetInt("fallTimes" + name,fallTimes);
+        PlayerPrefs.Save();
+    }
+
+    public int GetFallTimes()
+    {
+        return PlayerPrefs.GetInt("fallTimes" + name);
+    }
     public float GetSpeedAdjustment(float completionPercentage)
     {
         float currentCompletionPercentage = 0;

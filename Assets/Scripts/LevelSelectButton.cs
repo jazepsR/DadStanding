@@ -52,7 +52,9 @@ public class LevelSelectButton : MonoBehaviour
     }
     public void SetupLvlSelectScreen()
     {
-        string jokesSeenString = "Jokes told " + levelData.GetJokesTold() + "/" + levelData.jokes.Length; 
+        string jokesSeenString = "";
+        if(levelData)
+            jokesSeenString = "Jokes told " + levelData.GetJokesTold() + "/" + levelData.jokes.Length; 
         MainMenuUI.instance.SetLevelSelect(levelName, jokesSeenString +"\n"+  levelDescription);
     }
 }

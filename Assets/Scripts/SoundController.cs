@@ -22,16 +22,48 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip levelStartClick;
     [SerializeField] private AudioClip chuckle;
     [SerializeField] private AudioClip error;
-
+    private AudioSource musicSource;
     private List<AudioClip> winClips = new List<AudioClip>();
+    private float musicVolMax =0.60f;
+    private float musicVolTarget;
     private void Awake()
     {
         source = GetComponent<AudioSource>();
         instance = this;
         winClips.Add(sigh); winClips.Add(sigh2); winClips.Add(cricket); winClips.Add(grumble);
     }
+
+    private void Start()
+    {
+        musicSource = GameObject.FindGameObjectWithTag("music").GetComponent<AudioSource>();
+        if (musicSource == null)
+        {
+            musicVolTarget = musicVolMax;
+        }
+        FadeInMusic();
+    }
+
+    public void FadeInMusic()
+    {
+        if (musicSource != null)
+            musicVolTarget = musicVolMax;
+    }
+
+    public void FadeOutMusic()
+    {
+        if (musicSource != null)
+            musicVolTarget = 0;
+    }
+
+    private void Update()
+    {
+        if(musicSource)
+        {
+            musicSource.volume = Mathf.Lerp(musicSource.volume, musicVolTarget, Time.deltaTime*2.5f);
+        }
+    }
     // Start is called before the first frame update
-   public void PlayJoke(JokeScriptable joke)
+    public void PlayJoke(JokeScriptable joke)
     {
         if (joke.setupAudio && joke.punchlineAudio)
             StartCoroutine(PlayJokeCoroutine(joke));
@@ -55,7 +87,7 @@ public class SoundController : MonoBehaviour
         GameManager.instance.OnPunchline();
         source.PlayOneShot(joke.punchlineAudio);
         yield return new WaitForSecondsRealtime(joke.punchlineAudio.length + 0.2f);
-        source.PlayOneShot(badumTss);
+        source.PlayOneShot(badumTss,1.6f);
         yield return new WaitForSecondsRealtime(0.35f);
         if (GameManager.levelIndex == 2)
             source.PlayOneShot(chuckle);
@@ -67,6 +99,7 @@ public class SoundController : MonoBehaviour
     {
         source.PlayOneShot(oof);
         source.PlayOneShot(badDad);
+        FadeOutMusic();
     }
 
     public void PlayGetHit()

@@ -36,11 +36,13 @@ public class UiManager : MonoBehaviour
     [Header("gameplay menu")]
     public GameObject gameplayMenu;
     public TMP_Text scoreText;
+    public GameObject wind;
 
     // Start is called before the first frame update
     void Awake()
     {
         instance = this;
+        wind.gameObject.SetActive(false);
     }
     public void Update()
     {
@@ -78,11 +80,11 @@ public class UiManager : MonoBehaviour
                 speechBubble.SetActive(true);
                 speechBubbleText.text = GameManager.instance.activeJoke.setupText; 
                 speechBubbleNext.SetActive(true);
+                wind.gameObject.SetActive(false);
                 break;
             case GameState.Playing:
                 gameplayMenu.SetActive(true);
                 speechBubble.SetActive(false);
-
                 break;
             case GameState.Win:
                 speechBubbleNext.SetActive(false);

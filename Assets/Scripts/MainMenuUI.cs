@@ -5,8 +5,10 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
 public class MainMenuUI : MonoBehaviour
 {
+    public Button continueButton;
     public GameObject tutorial;
     public GameObject fade;
     public GameObject clickToStart;
@@ -17,10 +19,13 @@ public class MainMenuUI : MonoBehaviour
     public TMP_Text levelSelectDescription;
     public GameObject highScoreNameInput;
     public TMP_Text highScoreNameText;
+    public TMP_Text highScoreStats;
+    public GameObject newGamePopup;
     public static MainMenuUI instance;
     public static bool openLevel = false;
     public static bool openHighScore = false;
     public List<HighScoreData> highScores;
+    public List<LevelData> levelData;
     public HighScoreElement highScoreElement;
     public Transform highScoreParent;
     private void Awake()
@@ -29,6 +34,7 @@ public class MainMenuUI : MonoBehaviour
     }
     private void Start()
     {
+        SoundController.instance.FadeInMusic();
         highScore.SetActive(false);
         mainMenu.SetActive(true);
         fade.SetActive(false);
@@ -36,11 +42,14 @@ public class MainMenuUI : MonoBehaviour
         tutorial.SetActive(false);
         highScoreNameInput.gameObject.SetActive(false);
         clickToStart.SetActive(true);
-        if(openLevel)
+        newGamePopup.SetActive(false);
+        continueButton.interactable = PlayerPrefs.GetInt(GameManager.saveKey) > 0;
+        if (openLevel)
         {
             mainMenu.SetActive(false);
             highScore.SetActive(false);
             levelMenu.SetActive(true);
+            newGamePopup.SetActive(false);
             openLevel = false;
         }
         if (openHighScore)
@@ -49,6 +58,7 @@ public class MainMenuUI : MonoBehaviour
             mainMenu.SetActive(false);
             highScore.SetActive(true);
             levelMenu.SetActive(false);
+            newGamePopup.SetActive(false);
             openHighScore = false;
             highScoreNameInput.gameObject.SetActive(true);
         }
@@ -60,8 +70,37 @@ public class MainMenuUI : MonoBehaviour
         mainMenu.SetActive(false);
         highScore.SetActive(true);
         levelMenu.SetActive(false);
+        newGamePopup.SetActive(false);
     }
 
+
+    public string GetStatsText()
+    {
+        string toReturn = "";
+        int jokesTold = 0;
+        int totalJokes = 0;
+        int fallTimes = 0;
+        int mostFalls = 0;
+        string mostFallLevel = "";
+        foreach(LevelData level in levelData)
+        {
+            jokesTold += level.GetJokesTold();
+            totalJokes += level.jokes.Length;
+            fallTimes += level.GetFallTimes();
+            if(level.GetFallTimes()>mostFalls)
+            {
+                mostFalls = level.GetFallTimes();
+                mostFallLevel = level.levelName;
+            }
+        }
+        toReturn += "Jokes told\t\t" + jokesTold + "/" + totalJokes + "\n";
+        toReturn += "Times fallen\t" + fallTimes + "\n";
+        toReturn += "Times hit\t\t" + PlayerPrefs.GetInt("timesHit") + "\n";
+        if (mostFallLevel != "")
+            toReturn += "Toughest level\t" + mostFallLevel + "\n";
+
+        return toReturn;
+    }
     public void AddHighScore()
     {
         highScores.Add(new HighScoreData(highScoreNameText.text, GameManager.totalScore));
@@ -70,6 +109,28 @@ public class MainMenuUI : MonoBehaviour
         SetupHighScore();
     }
 
+    public void ShowNewGamePopup()
+    {
+        if (PlayerPrefs.GetInt(GameManager.saveKey) > 0)
+        {
+            newGamePopup.gameObject.SetActive(true);
+        }
+        else
+        {
+            mainMenu.SetActive(false);
+            highScore.SetActive(false);
+            levelMenu.SetActive(true);
+            newGamePopup.SetActive(false);
+            openLevel = false;
+        }
+    }
+
+    public void StartNewGame()
+    {
+        
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
+    }
     public void SetupHighScore()
     {
         foreach(Transform child in highScoreParent)
@@ -78,6 +139,7 @@ public class MainMenuUI : MonoBehaviour
         }
         highScores = highScores.OrderBy(p => p.score).ToList();
         highScores.Reverse();
+        highScoreStats.text = GetStatsText();
         for(int i =0; i< 8; i++)
         {
             HighScoreElement highScoreObj = Instantiate(highScoreElement, highScoreParent);

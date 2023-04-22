@@ -49,6 +49,9 @@ public class DadController : MonoBehaviour
                 slider.GetHit(projectile.moveSpeed > 0? GameManager.instance.activeLevel.projectileStrenght : -GameManager.instance.activeLevel.projectileStrenght);
             }
             SoundController.instance.PlayGetHit();
+            int timesHitCount = PlayerPrefs.GetInt("timesHit") + 1;
+            PlayerPrefs.SetInt("timesHit", timesHitCount);
+            PlayerPrefs.Save();
             StartCoroutine(Falsh());
             GameManager.instance.score -= 20;
         }

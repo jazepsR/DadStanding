@@ -21,5 +21,6 @@ public class JokeScriptable : ScriptableObject
     public void SaveTimesTold()
     {
         PlayerPrefs.SetInt(name + "TimesTold", timesTold);
+        PlayerPrefs.Save();
     }
 }

@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         activeJoke = GetNextJoke();
         SoundController.instance.PlaySetup(activeJoke);
         UiManager.instance.SetupUI();
+        SoundController.instance.FadeInMusic();
         foreach (SliderScript slider in sliders)
         {
             slider.Reset();
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
         // SoundController.instance.PlaySetup(activeJoke);
         levelTime = level.levelLength;
         gameState = GameState.Playing;
+        UiManager.instance.wind.SetActive(true);
         UiManager.instance.SetupUI();
         scoringTimeStamp = Time.time;
         foreach(SliderScript slider in sliders)
@@ -91,6 +93,7 @@ public class GameManager : MonoBehaviour
     public void SetLoseState()
     {
         gameState = GameState.Fail;
+        activeLevel.SaveFallTimes();
         UiManager.instance.SetupUI();
         SoundController.instance.PlayLose();
     }
