@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private JokeScriptable[] generalJokes;
     [HideInInspector] public JokeScriptable activeJoke;
     [HideInInspector] public int score = 0;
+    [HideInInspector] public static int totalScore = 0;
     private float scoringIncrement = 0.2f;
     private float scoringTimeStamp = 0;
     public SliderScript[] sliders;
@@ -129,6 +130,8 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Win;
         score += winMultiplier * GetScoreIncreaseIncrement();
+        totalScore += score;
+        activeJoke.timesTold++;
         UiManager.instance.SetupUI();
         foreach (SliderScript slider in sliders)
         {
@@ -136,7 +139,7 @@ public class GameManager : MonoBehaviour
             slider.SetWinState();
         }
         SoundController.instance.PlayJoke(activeJoke);
-        activeJoke.timesTold++;
+        activeJoke.SaveTimesTold();
         PlayerPrefs.SetInt(saveKey, levelIndex + 1);
         PlayerPrefs.Save();
     }

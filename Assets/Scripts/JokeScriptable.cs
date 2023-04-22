@@ -13,4 +13,13 @@ public class JokeScriptable : ScriptableObject
     public AudioClip punchlineAudio;
     [HideInInspector] public int timesTold = 0;
 
+    public void LoadTimesTold()
+    {
+        timesTold= PlayerPrefs.GetInt(name + "TimesTold");
+    }
+
+    public void SaveTimesTold()
+    {
+        PlayerPrefs.SetInt(name + "TimesTold", timesTold);
+    }
 }

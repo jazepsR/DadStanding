@@ -20,7 +20,24 @@ public class LevelData : ScriptableObject
     public List<MoveData> moveData;
     public List<ProjectileData> projectileData;
 
+    public void LoadTimesTold()
+    {
+        foreach(JokeScriptable joke in jokes)
+        {
+            joke.LoadTimesTold();
+        }    
+    }
 
+    public int GetJokesTold()
+    {
+        int jokesTold = 0;
+        foreach(JokeScriptable joke in jokes)
+        {
+            if(joke.timesTold >0)
+                jokesTold++;
+        }
+        return jokesTold;
+    }
     public float GetSpeedAdjustment(float completionPercentage)
     {
         float currentCompletionPercentage = 0;
@@ -36,9 +53,6 @@ public class LevelData : ScriptableObject
                 currentCompletionPercentage += moveData.time / levelLength;
             }
         }
-
-
-
         return 0;// moveCurve.Evaluate(completionPercentage) + Random.Range(-randomnessStrength, randomnessStrength);
     }
 

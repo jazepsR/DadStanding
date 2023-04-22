@@ -13,12 +13,15 @@ public class LevelSelectButton : MonoBehaviour
     public GameObject lockObj;
     public GameObject unlockObj;
     private bool locked = false;
+    public LevelData levelData;
     // Start is called before the first frame update
     void Start()
     {
         locked = levelID> PlayerPrefs.GetInt(GameManager.saveKey, 0);
         lockObj.SetActive(locked);
         unlockObj.SetActive(!locked);
+        if(levelData)
+            levelData.LoadTimesTold();
         //GetComponent<Button>().interactable = !locked;
     }
 
@@ -49,6 +52,7 @@ public class LevelSelectButton : MonoBehaviour
     }
     public void SetupLvlSelectScreen()
     {
-        MainMenuUI.instance.SetLevelSelect(levelName, levelDescription);
+        string jokesSeenString = "Jokes told " + levelData.GetJokesTold() + "/" + levelData.jokes.Length; 
+        MainMenuUI.instance.SetLevelSelect(levelName, jokesSeenString +"\n"+  levelDescription);
     }
 }

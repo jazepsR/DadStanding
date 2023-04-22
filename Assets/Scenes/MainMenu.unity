@@ -859,6 +859,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 16a8326625207e84cbfd9bb1ac474622, type: 2}
+    - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
       propertyPath: levelName
       value: Bus Bus
       objectReference: {fileID: 0}
@@ -1032,6 +1036,10 @@ PrefabInstance:
       propertyPath: levelID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d0da95c28c784c40916b04225301902, type: 2}
     - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
       propertyPath: levelName
       value: Beach day
@@ -1210,6 +1218,10 @@ PrefabInstance:
       propertyPath: levelID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f27ef01e8335c54e93154c80ab313e9, type: 2}
     - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
       propertyPath: levelName
       value: Boat Time
@@ -2270,6 +2282,10 @@ PrefabInstance:
       propertyPath: levelID
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: b4b1450451b34c14da3951a88fbfb7a9, type: 2}
     - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
       propertyPath: levelName
       value: Snow Day
@@ -4063,6 +4079,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 120421399}
     m_Modifications:
+    - target: {fileID: 1015107511245760140, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: cd3c550f1ad2b1e4f83b2c06f2b9d064, type: 2}
     - target: {fileID: 1015107511245760143, guid: 6c718ae165675d74f82a5dc6bc53804b, type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
