@@ -22,10 +22,14 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip levelStartClick;
     [SerializeField] private AudioClip chuckle;
     [SerializeField] private AudioClip error;
+    [SerializeField] private AudioClip woosh;
+    [SerializeField] private List<AudioClip> noBalance;
     private AudioSource musicSource;
     private List<AudioClip> winClips = new List<AudioClip>();
     private float musicVolMax =0.60f;
     private float musicVolTarget;
+    private float lastNoBalance;
+    private float noBalanceTimeout = 1f;
     private void Awake()
     {
         source = GetComponent<AudioSource>();
@@ -42,7 +46,19 @@ public class SoundController : MonoBehaviour
         }
         FadeInMusic();
     }
+    public void PlayNoBalance()
+    {
+        if (Time.time > lastNoBalance + noBalanceTimeout)
+        {
+            source.PlayOneShot(noBalance[Random.Range(0, noBalance.Count)]);
+            lastNoBalance = Time.time;
+        }
+    }
 
+    public void PlayWoosh()
+    {
+        source.PlayOneShot(woosh, 0.3f);
+    }
     public void FadeInMusic()
     {
         if (musicSource != null)

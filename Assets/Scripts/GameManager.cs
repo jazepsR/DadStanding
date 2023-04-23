@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-public enum GameState { Starting, Playing, Fail, Win, punchLine}
+public enum GameState { Starting, Playing, Fail, Win, punchLine, windGust}
 public class GameManager : MonoBehaviour
 {
     public static GameState gameState = GameState.Starting;
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public SliderScript[] sliders;
     private int winMultiplier = 10;
     public static string saveKey = "levelSave";
+    private bool resetThisFrame = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
         {
             slider.Reset();
         }
+        resetThisFrame = true;
     }
 
     public void NextLevel()
@@ -68,7 +70,21 @@ public class GameManager : MonoBehaviour
     }
     public void StartLevel()
     {
+        StartCoroutine(StartLevelCoroutine());
+    }
+
+    private IEnumerator StartLevelCoroutine()
+    {
+
+        gameState = GameState.windGust;
+        UiManager.instance.SetupUI();
+        UiManager.instance.wind.SetActive(true);
+        SoundController.instance.PlayWoosh();
+        yield return new WaitForSecondsRealtime(0.35f);
+        SoundController.instance.PlayNoBalance();
+        yield return new WaitForSecondsRealtime(0.35f);
         StartLevel(activeLevel);
+
     }
     void StartLevel(LevelData level)
     {
@@ -78,7 +94,6 @@ public class GameManager : MonoBehaviour
         // SoundController.instance.PlaySetup(activeJoke);
         levelTime = level.levelLength;
         gameState = GameState.Playing;
-        UiManager.instance.wind.SetActive(true);
         UiManager.instance.SetupUI();
         scoringTimeStamp = Time.time;
         foreach(SliderScript slider in sliders)
@@ -172,9 +187,9 @@ public class GameManager : MonoBehaviour
         switch (gameState)
         {
             case GameState.Starting:
-                if(  Keyboard.current.anyKey.wasPressedThisFrame)
+                if(Keyboard.current.anyKey.wasPressedThisFrame && !resetThisFrame)
                 {
-                    StartLevel(activeLevel);
+                   StartCoroutine(StartLevelCoroutine());
                 }
                 break;
             case GameState.Playing:
@@ -215,8 +230,7 @@ public class GameManager : MonoBehaviour
 
 
                 break;
-
-
         }
+        resetThisFrame = false;
     }
 }

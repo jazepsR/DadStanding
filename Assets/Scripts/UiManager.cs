@@ -84,6 +84,11 @@ public class UiManager : MonoBehaviour
                 speechBubbleNext.SetActive(true);
                 wind.gameObject.SetActive(false);
                 break;
+            case GameState.windGust:
+                speechBubble.SetActive(false);
+                startMenu.SetActive(false);
+                break;
+
             case GameState.Playing:
                 gameplayMenu.SetActive(true);
                 speechBubble.SetActive(false);

@@ -155,3 +155,7 @@ MonoBehaviour:
   levelStartClick: {fileID: 8300000, guid: 9658f8b9050cb9244bb84735582ce963, type: 3}
   chuckle: {fileID: 8300000, guid: 206481daf83bf664f8f6141ada4c87dc, type: 3}
   error: {fileID: 8300000, guid: a35a70e282489ea48a66738f4dbc243f, type: 3}
+  woosh: {fileID: 8300000, guid: 493850640e382e148a5ecbce13f7f52d, type: 3}
+  noBalance:
+  - {fileID: 8300000, guid: cee70d6af9af2c54ebaa4ef0216202d3, type: 3}
+  - {fileID: 8300000, guid: aa326fce8b3d6344a9ade2c73aee531e, type: 3}
