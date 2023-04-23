@@ -115,7 +115,7 @@ public class SoundController : MonoBehaviour
 
     public void LevelStartClick()
     {
-        source.PlayOneShot(levelStartClick);
+        source.PlayOneShot(levelStartClick, 0.75f);
     }
     // Update is called once per frame
     /*public void PlayBadumTss()

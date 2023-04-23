@@ -16,6 +16,7 @@ public class UiManager : MonoBehaviour
 
     [Header("win menu")]
     public GameObject winMenu;
+    public Button anotherJokeButton;
     public GameObject winText;
     public GameObject winMenuButtons;
     public GameObject nextLevelButton;
@@ -28,6 +29,7 @@ public class UiManager : MonoBehaviour
     public GameObject loseMenu;
     public TMP_Text loseTime;
     public TMP_Text loseScore;
+    public Button tryAgainButton;
 
     [Header("start menu")]
     public GameObject startMenu;
@@ -104,6 +106,7 @@ public class UiManager : MonoBehaviour
                     nextLevelText.text = "Finish Game >";
                 }
                 allJokesSeen.SetActive(GameManager.instance.activeLevel.GetJokesTold() >= GameManager.instance.activeLevel.jokes.Length);
+                anotherJokeButton.Select();
                 break;
 
             case GameState.punchLine:
@@ -113,6 +116,7 @@ public class UiManager : MonoBehaviour
                 speechBubblePunchlineText.text = GameManager.instance.activeJoke.punchlineText;
                 break;
             case GameState.Fail:
+                tryAgainButton.Select();
                 StartCoroutine(EnableLoseMenu());
                 speechBubble.SetActive(false);
                 loseScore.text = string.Format("Score: {0}", GameManager.instance.score);

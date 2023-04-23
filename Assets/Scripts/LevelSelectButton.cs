@@ -10,6 +10,7 @@ public class LevelSelectButton : MonoBehaviour
     [TextArea(2,5)]
     public string levelDescription;
     public int levelID;
+    public Sprite normalIcon, goldIcon;
     public GameObject lockObj;
     public GameObject unlockObj;
     private bool locked = false;
@@ -22,6 +23,7 @@ public class LevelSelectButton : MonoBehaviour
         unlockObj.SetActive(!locked);
         if(levelData)
             levelData.LoadTimesTold();
+        unlockObj.GetComponent<Image>().sprite = levelData.jokes.Length == levelData.GetJokesTold() ? goldIcon : normalIcon;
         //GetComponent<Button>().interactable = !locked;
     }
 
@@ -55,6 +57,6 @@ public class LevelSelectButton : MonoBehaviour
         string jokesSeenString = "";
         if(levelData)
             jokesSeenString = "Jokes told " + levelData.GetJokesTold() + "/" + levelData.jokes.Length; 
-        MainMenuUI.instance.SetLevelSelect(levelName, jokesSeenString +"\n"+  levelDescription);
+        MainMenuUI.instance.SetLevelSelect(levelName, levelDescription + "\n\n" + jokesSeenString);
     }
 }
