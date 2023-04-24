@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e03cdcecf130404a9eeaa75ef527e56, type: 3}
   m_Name: Beach
   m_EditorClassIdentifier: 
-  levelName: Beach
+  levelName: Family vacation
   jokes:
   - {fileID: 11400000, guid: b1e48b32e7b2869429f8bb232c79ed5d, type: 2}
   - {fileID: 11400000, guid: 1e48b3170b34e774195a751b1f5394a3, type: 2}

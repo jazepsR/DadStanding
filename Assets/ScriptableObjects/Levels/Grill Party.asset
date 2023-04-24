@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e03cdcecf130404a9eeaa75ef527e56, type: 3}
   m_Name: Grill Party
   m_EditorClassIdentifier: 
-  levelName: Grill Party
+  levelName: Sunday roast
   jokes:
   - {fileID: 11400000, guid: 533f05a0fc674c64685687f9abe00fb0, type: 2}
   - {fileID: 11400000, guid: 9b0778e6f82a61545bc3f3cc620e63c8, type: 2}

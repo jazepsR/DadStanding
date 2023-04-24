@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e03cdcecf130404a9eeaa75ef527e56, type: 3}
   m_Name: Boat
   m_EditorClassIdentifier: 
-  levelName: Boat
+  levelName: Fishing getaway
   jokes:
   - {fileID: 11400000, guid: c9d51723465b7954787adf8f711765db, type: 2}
   - {fileID: 11400000, guid: aa280d0295d105f41af266602d1f87ca, type: 2}

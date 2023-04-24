@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e03cdcecf130404a9eeaa75ef527e56, type: 3}
   m_Name: mountain
   m_EditorClassIdentifier: 
-  levelName: Mountain
+  levelName: Skiing trip
   jokes:
   - {fileID: 11400000, guid: e2a06c39876dc7b4c835a000143b31a7, type: 2}
   - {fileID: 11400000, guid: b86fe0b0eb46f0942ac3c4878800227f, type: 2}
