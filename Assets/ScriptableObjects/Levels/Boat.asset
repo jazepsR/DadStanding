@@ -38,37 +38,37 @@ MonoBehaviour:
     strenght: 1
   - isLeft: 0
     time: 2
-    strenght: 1
+    strenght: 0.5
   - isLeft: 1
     time: 0.5
-    strenght: 1
+    strenght: 0.5
   - isLeft: 0
     time: 0.5
-    strenght: 1
+    strenght: 0.5
   - isLeft: 1
     time: 0.5
-    strenght: 1
+    strenght: 0.5
   - isLeft: 0
     time: 0.5
-    strenght: 1
+    strenght: 0.5
   - isLeft: 1
     time: 2
-    strenght: 1
+    strenght: 0.5
   - isLeft: 0
     time: 1
-    strenght: 1
+    strenght: 0.5
   - isLeft: 0
     time: 1
-    strenght: 1
+    strenght: 0.5
   - isLeft: 0
-    time: 1
-    strenght: 2
-  - isLeft: 1
     time: 1
     strenght: 1
   - isLeft: 1
     time: 1
-    strenght: 2
+    strenght: 0.5
+  - isLeft: 1
+    time: 1
+    strenght: 1
   projectileData:
   - isLeft: 0
     launchTime: 3

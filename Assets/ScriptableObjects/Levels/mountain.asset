@@ -23,7 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0ad9b23e6ba59b6429eaa2e6bb9432ce, type: 2}
   - {fileID: 11400000, guid: 348aeda58b3d40149895a31529897d08, type: 2}
   levelLength: 12
-  sliderMoveSpeed: 4
+  sliderMoveSpeed: 5
   dampingTime: 0.1
   controlType: 0
   gameplayBackground: {fileID: 21300000, guid: d06588883910ddb49a3a5b6362c7e9b0, type: 3}
@@ -35,31 +35,31 @@ MonoBehaviour:
   moveData:
   - isLeft: 1
     time: 2
+    strenght: 0.5
+  - isLeft: 0
+    time: 2
+    strenght: 1
+  - isLeft: 1
+    time: 0.5
     strenght: 1
   - isLeft: 0
-    time: 2
-    strenght: 2
-  - isLeft: 1
     time: 0.5
     strenght: 2
-  - isLeft: 0
-    time: 0.5
-    strenght: 4
   - isLeft: 1
     time: 0.5
-    strenght: 4
+    strenght: 2
   - isLeft: 0
     time: 0.5
-    strenght: 4
+    strenght: 2
   - isLeft: 1
     time: 2
-    strenght: 5
+    strenght: 2.5
   - isLeft: 0
     time: 2
-    strenght: 5
+    strenght: 2.5
   - isLeft: 0
     time: 2
-    strenght: 7
+    strenght: 3.5
   projectileData:
   - isLeft: 0
     launchTime: 0

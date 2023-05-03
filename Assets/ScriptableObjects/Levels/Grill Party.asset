@@ -36,19 +36,19 @@ MonoBehaviour:
   moveData:
   - isLeft: 1
     time: 1
-    strenght: 0.1
+    strenght: 0.01
   - isLeft: 0
     time: 2
-    strenght: 3
+    strenght: 1.5
   - isLeft: 1
     time: 0.5
-    strenght: 3
+    strenght: 1.5
   - isLeft: 0
     time: 4
-    strenght: 3
+    strenght: 1.5
   - isLeft: 1
     time: 3
-    strenght: 3
+    strenght: 1.5
   projectileData:
   - isLeft: 0
     launchTime: 3
